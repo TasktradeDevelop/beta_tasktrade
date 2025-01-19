@@ -1,0 +1,25 @@
+/*
+여기에 모든 html에 공통으로 사용될 디자인을 작성한다.
+*, body 같은 reset, normalize styles
+some global layouts
+utility classes, such as :hidden, :active
+*/
+
+/* Basic Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    margin: 20px 0;
+}

@@ -1,0 +1,1 @@
+// 왼쪽 사이드바에 대한 주요 linking function 정의
