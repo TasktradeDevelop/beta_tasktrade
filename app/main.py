@@ -6,6 +6,8 @@ from starlette.templating import Jinja2Templates
 
 from app.database.database import Base, engine
 
+from app.account import account_router
+
 app = FastAPI()
 
 templates = Jinja2Templates(directory="app/templates")
@@ -19,6 +21,8 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+app.include_router(account_router.account)
 
 # @app.on_event("startup")
 # def on_startup():

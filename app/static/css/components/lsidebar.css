@@ -1,3 +1,84 @@
 /*
 페이지 왼쪽 사이드바에 대한 design style
 */
+
+.sidebar {
+    flex: 1;
+    width: 20%;
+    background-color: #eaeaea;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Push bottom content to the bottom */
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.profile-photo {
+    width: 100%;
+    height: 150px; /* Adjust height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* to my profile link inside profile div */
+#to-myprofile {
+    font-size: 1.1rem; /* Set the font size */
+    color: #007bff; /* Blue color for the text */
+    text-decoration: none; /* Remove underline (if any) */
+    cursor: pointer; /* Show pointer cursor on hover */
+    margin-top: 10px; /* Add some spacing from the profile photo */
+    display: inline-block; /* Ensure it behaves like a clickable button */
+    transition: color 0.3s ease, transform 0.2s ease; /* Smooth color and scale transitions */
+}
+
+#to-myprofile:hover {
+    color: #0056b3; /* Slightly darker blue on hover */
+    transform: scale(1.05); /* Slightly enlarge the text on hover */
+    text-decoration: underline; /* Underline effect on hover */
+}
+
+.sidebar-menu {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+.sidebar-menu li {
+    margin: 10px 0;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Style for the bottom menu */
+.sidebar-under-menu {
+    list-style: none;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0;
+    width: 100%; /* Stretch to sidebar width */
+    border-top: 2px solid #ccc; /* Gray bar at the top */
+}
+
+.sidebar-under-menu li {
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 10px 0;
+}

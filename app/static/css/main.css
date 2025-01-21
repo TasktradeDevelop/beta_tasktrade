@@ -5,7 +5,7 @@ some global layouts
 utility classes, such as :hidden, :active
 */
 
-/* Basic Settings */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -14,12 +14,8 @@ utility classes, such as :hidden, :active
 
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
     background-color: #f9f9f9;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-weight: bold;
-    margin: 20px 0;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }

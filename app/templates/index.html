@@ -1,21 +1,75 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task Trade</title>
 
     <!-- Link to external CSS -->
     <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/pages/index.css">
     <link rel="stylesheet" href="/static/css/components/navbar.css">
     <link rel="stylesheet" href="/static/css/components/lsidebar.css">
 
     <!-- Link to external JS -->
     <script src="/static/js/main.js" defer></script>
+    <script src="/static/js/pages/index.js" defer></script>
     <script src="/static/js/components/navbar.js" defer></script>
     <script src="/static/js/components/lsidebar.js" defer></script>
 
 </head>
 <body>
-    <h1>Task Trade</h1>
+    <header class="header">
+        <div class="logo">
+            <h1>TaskTrade</h1>
+        </div>
+        <nav class="nav">
+            <button>환전 및 충전</button>
+            <button>로그인</button>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="profile">
+                <div class="profile-photo">
+                    <img src="/static/images/personal/sample_profile.png" alt="프로필사진">
+                </div>
+                <span id="to-myprofile" onclick="to_myprofile()">내 프로필</span>
+            </div>
+            <ul class="sidebar-menu">
+                <li>중간 메뉴 1</li>
+                <li>중간 메뉴 2</li>
+            </ul>
+            <ul class="sidebar-under-menu">
+                <li>약관</li>
+                <li>개인정보</li>
+                <li>회사정보</li>
+                <li>고객센터</li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main">
+            <section class="content">
+                <!-- Main Display -->
+            </section>
+            <div class="buttons">
+                <button>내 퀘스트 보기</button>
+                <button>진행중인 이벤트</button>
+                <button>설계된 이벤트</button>
+            </div>
+        </main>
+
+        <!-- Right Panel -->
+        <aside class="right-panel">
+            <div class="ad-section">광고 및 배너</div>
+            <div class="inquiry-section">1:1 문의</div>
+            <div class="notice-section">
+                <h3>공지사항</h3>
+                <p>메일함에서 클릭하면 바로 공지사항 페이지 이동</p>
+            </div>
+        </aside>
+    </div>
 </body>
 </html>
