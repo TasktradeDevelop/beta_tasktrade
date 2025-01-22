@@ -1,36 +1,32 @@
 from fastapi import FastAPI, Request
-from starlette.middleware.cors import CORSMiddleware
-from starlette.responses import HTMLResponse
+from fastapi.responses import HTMLResponse
+from fastapi.templating import Jinja2Templates
 from starlette.staticfiles import StaticFiles
-from starlette.templating import Jinja2Templates
 
-from app.database.database import Base, engine
+from app.core.config import settings
+from app.api import api_router
+from app.database import engine, Base
 
-from app.account import account_router
+import os
 
-app = FastAPI()
+# Create tables for all models
+# Base.metadata.create_all(bind=engine)
 
-templates = Jinja2Templates(directory="app/templates")
-app.mount("/static", StaticFiles(directory="app/static"), name="static")
+app = FastAPI(title=settings.PROJECT_NAME)
 
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
-
-app.include_router(account_router.account)
-
-# @app.on_event("startup")
-# def on_startup():
-    # Create all tables
-    # Base.metadata.drop_all(bind=engine)
-    # Base.metadata.create_all(bind=engine)
+# Setup Jinja2 templates
+templates_path = os.path.join(os.path.dirname(__file__), "templates")
+templates = Jinja2Templates(directory=templates_path)
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 
 @app.get("/", response_class=HTMLResponse)
-async def root_home(request: Request):
-    return templates.TemplateResponse("index.html", {'request': request})
+async def read_root(request: Request):
+    return templates.TemplateResponse("index.html", {"request": request})
+
+# Include routes
+app.include_router(api_router)
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)

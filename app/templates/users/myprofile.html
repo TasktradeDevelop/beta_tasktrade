@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내 프로필</title>
+
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/pages/myprofile.css">
+    <link rel="stylesheet" href="/static/css/components/navbar.css">
+
+    <!-- Link to external JS -->
+    <script src="/static/js/main.js" defer></script>
+    <script src="/static/js/pages/myprofile.js" defer></script>
+    <script src="/static/js/components/navbar.js" defer></script>
+
+</head>
+<body>
+    <header class="header">
+        <h1>내 프로필</h1>
+        <img src="/static/images/logo/premium.png" alt="Task Premium">
+    </header>
+
+    <div class="container">
+        <!-- Profile and Stats Section -->
+        <section class="profile-and-stats">
+            <div class="profile-container">
+                <div class="profile-photo">
+                    <img src="/static/images/personal/sample_profile.png" alt="프로필사진">
+                </div>
+                <div class="profile-info">
+                    <p><strong>KLM_TJ_00</strong></p>
+                    <p>2000.04.09</p>
+                    <p>Koreatong1374@gmail.com</p>
+                    <p>미션 신뢰도: <strong>69%</strong></p>
+                </div>
+            </div>
+
+            <!-- Stats Section -->
+            <div class="stats-section">
+                <div class="stat-box">
+                    <h2>42</h2>
+                    <p>등록미션</p>
+                </div>
+                <div class="stat-box">
+                    <h2>12</h2>
+                    <p>이용미션</p>
+                </div>
+                <div class="stat-box">
+                    <h2>240</h2>
+                    <p>팔로워</p>
+                </div>
+                <div class="stat-box">
+                    <h2>1.1M</h2>
+                    <p>팔로잉</p>
+                </div>
+            </div>
+
+            <!-- Missions Section -->
+            <div class="missions-section">
+                <div class="mission-box">
+                    <h3>최다 조회수</h3>
+                    <p>본인이 등록한 미션</p>
+                </div>
+                <div class="mission-box">
+                    <h3>높은 피드백 미션</h3>
+                    <p>본인이 등록한 미션</p>
+                </div>
+                <div class="mission-box">
+                    <h3>최대 이용 미션</h3>
+                    <p>본인이 등록한 미션</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <aside class="menu-section">
+            <button>한건 및 출금</button>
+            <button>내 미션 등록하기</button>
+            <button>이용 미션 관리하기</button>
+            <button>문의하기</button>
+            <button>비밀번호 변경</button>
+            <button class="logout">로그아웃</button>
+        </aside>
+    </div>
+</body>
+</html>

@@ -2,5 +2,5 @@
 
 // link to myprofile.html
 function to_myprofile() {
-    window.location.replace("/account/profile");
+    window.location.replace("/users/profile");
 }
