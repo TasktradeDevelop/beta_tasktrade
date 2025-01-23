@@ -1,5 +1,5 @@
 #!/bin/sh
-'''exec' "/Users/i_taeyori/Downloads/Team Task Trade/개발/beta_trasktrade/.venv/bin/python" "$0" "$@"
+'''exec' "/Users/i_taeyori/Downloads/Team Task Trade/개발/beta_tasktrade/.venv/bin/python3.13" "$0" "$@"
 ' '''
 # -*- coding: utf-8 -*-
 import re

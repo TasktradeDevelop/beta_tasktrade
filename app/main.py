@@ -15,8 +15,7 @@ import os
 app = FastAPI(title=settings.PROJECT_NAME)
 
 # Setup Jinja2 templates
-templates_path = os.path.join(os.path.dirname(__file__), "templates")
-templates = Jinja2Templates(directory=templates_path)
+templates = Jinja2Templates(directory="templates")
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 
