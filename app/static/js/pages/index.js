@@ -8,3 +8,7 @@ function to_myprofile() {
 function to_exc_with() {
     window.location.replace("/coin");
 }
+
+function login() {
+    window.location.replace("auth/login");
+}

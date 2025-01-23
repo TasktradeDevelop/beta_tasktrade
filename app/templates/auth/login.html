@@ -7,17 +7,34 @@
     <!-- Link to external CSS -->
     <link rel="stylesheet" href="/static/css/main.css">
     <link rel="stylesheet" href="/static/css/pages/login.css">
-    <link rel="stylesheet" href="/static/css/components/navbar.css">
-    <link rel="stylesheet" href="/static/css/components/lsidebar.css">
 
     <!-- Link to external JS -->
     <script src="/static/js/main.js" defer></script>
     <script src="/static/js/pages/login.js" defer></script>
-    <script src="/static/js/components/navbar.js" defer></script>
-    <script src="/static/js/components/lsidebar.js" defer></script>
 
 </head>
 <body>
-    <h1>Task Trade 로그인</h1>
+    <div class="login-container">
+        <!-- 메인 페이지로 링크 -->
+        <a href="/">
+            <img src="/static/images/logo/task_trade_logo.jpeg" alt="Main Logo">
+        </a>
+
+        <!-- 로그인 폼 -->
+        <h2>Task Trade 로그인 하기</h2>
+
+        <form onsubmit="loginAccount(event)">
+            <input type="email" id="userid" placeholder="ID" required><br>
+            <input type="password" id="password" placeholder="비밀번호" required><br>
+            <button type="submit">로그인</button>
+        </form>
+
+        <!-- 회원가입 링크 with clickable text instead of button -->
+        <form id="signupForm" action="/auth/signup" method="get">
+            <!-- This is the clickable text styled as a link -->
+            <span class="submit-text" onclick="document.getElementById('signupForm').submit()">회원가입</span>
+        </form>
+
+    </div>
 </body>
 </html>
