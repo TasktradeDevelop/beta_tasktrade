@@ -2,7 +2,10 @@ from fastapi import APIRouter, Request
 from starlette.responses import HTMLResponse
 from starlette.templating import Jinja2Templates
 
-templates = Jinja2Templates(directory="app/templates/users")
+import os
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+templates = Jinja2Templates(directory=os.path.join(BASE_DIR, "templates/users"))
 
 router = APIRouter(
     prefix="/users",

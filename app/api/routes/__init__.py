@@ -7,6 +7,6 @@ from .dashboard import router as dashboard_router
 router = APIRouter()
 
 # Include individual route modules
-router.include_router(auth_router, prefix="/auth", tags=["Authentication"])
-router.include_router(users_router, prefix="/users", tags=["Users"])
-router.include_router(dashboard_router, prefix="/dashboard", tags=["Dashboard"])
+router.include_router(auth_router)
+router.include_router(users_router)
+router.include_router(dashboard_router)
