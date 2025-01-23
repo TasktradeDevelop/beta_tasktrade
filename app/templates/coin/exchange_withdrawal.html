@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>교환 및 출금</title>
+
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/pages/exchange-withdrawal.css">
+    <link rel="stylesheet" href="/static/css/components/navbar.css">
+
+    <!-- Link to external JS -->
+    <script src="/static/js/main.js" defer></script>
+    <script src="/static/js/pages/exchange.js" defer></script>
+    <script src="/static/js/pages/withdrawal.js" defer></script>
+    <script src="/static/js/components/navbar.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <h1>교환 및 출금</h1>
+    </header>
+
+    <div class="container">
+        <!-- Total Assets Section -->
+        <div class="total-assets">
+            <p>보유금액: <span id="coin-balance">100,000 COIN</span></p>
+        </div>
+
+        <!-- Transaction Section -->
+        <div class="transaction-section">
+            <div class="transaction-box" id="exchange-history">
+                <h3>교환내역</h3>
+                <p>교환 내역이 여기에 표시됩니다.</p>
+            </div>
+            <div class="transaction-box" id="withdrawal-history">
+                <h3>출금내역</h3>
+                <p>출금 내역이 여기에 표시됩니다.</p>
+            </div>
+            <div class="transaction-box" id="transaction-spec">
+                <h3>교환 및 안내사항</h3>
+                <p>교환 및 안내사항이 여기에 표시됩니다.</p>
+
+                <div class="action-buttons">
+                    <button class="exchange-button">교환 하기</button>
+                    <button class="withdraw-button">출금 하기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

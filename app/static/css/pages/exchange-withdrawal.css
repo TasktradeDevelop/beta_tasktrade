@@ -1,0 +1,96 @@
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    height: calc(100vh - 80px); /* Full height minus the header */
+    box-sizing: border-box;
+}
+
+/* Total Assets Section */
+.total-assets {
+    flex: 0; /* Allow it to take minimum space */
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Transaction Section */
+.transaction-section {
+    flex: 1; /* Take all remaining space */
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.transaction-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures inner content spreads evenly */
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 100%; /* Make the boxes extend to fill the height */
+}
+
+.transaction-box h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.transaction-box p {
+    flex: 1; /* Allow the text area to grow if needed */
+    font-size: 1rem;
+    color: #555;
+    overflow: auto; /* Scroll if content exceeds */
+}
+
+#exchange-history,
+#withdrawal-history {
+    flex: 1;
+    min-height: 0; /* Prevent content overflow */
+}
+
+#transaction-spec {
+    flex: 2;
+    min-height: 0; /* Prevent content overflow */
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px; /* Add spacing above buttons */
+}
+
+.exchange-button,
+.withdraw-button {
+    flex: 1;
+    padding: 10px;
+    font-size: 1rem;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.exchange-button {
+    background-color: #28a745;
+}
+
+.exchange-button:hover {
+    background-color: #218838;
+}
+
+.withdraw-button {
+    background-color: #dc3545;
+}
+
+.withdraw-button:hover {
+    background-color: #c82333;
+}

@@ -4,3 +4,7 @@
 function to_myprofile() {
     window.location.replace("/users/profile");
 }
+
+function to_exc_with() {
+    window.location.replace("/coin");
+}
