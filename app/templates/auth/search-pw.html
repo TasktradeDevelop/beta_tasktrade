@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Task Trade 비밀번호 찾기</title>
+
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/components/auth.css">
+
+    <!-- Link to external JS -->
+    <script src="/static/js/main.js" defer></script>
+    <script src="/static/js/pages/auth-search.js" defer></script>
+
+</head>
+<body>
+    <div class="auth-container">
+        <!-- 메인 페이지로 링크 -->
+        <a href="/">
+            <img src="/static/images/logo/task_trade_logo.jpeg" alt="Main Logo">
+        </a>
+
+        <!-- 로그인 폼 -->
+        <h2>Task Trade 비밀번호 찾기</h2>
+
+        <form onsubmit="findPW(event)">
+            <input type="email" id="user-id" placeholder="아이디" required><br>
+            <button type="submit">비밀번호 조회</button>
+            <p class="caution-text">비밀번호 변경 이메일이 전송됩니다.</p>
+        </form>
+    </div>
+</body>
+</html>

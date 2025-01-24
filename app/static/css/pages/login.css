@@ -1,78 +1,37 @@
 /*
 login page에만 특화된 design layout
 */
-/* Extra body style */
-body {
+
+/* Links for searching id/pw, signup */
+.text-links {
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
+    justify-content: center;
+    gap: 10px; /* Adjust spacing between elements */
+    font-size: 0.7rem; /* Adjust font size if necessary */
+    margin: 5px;
 }
 
-/* Main login container */
-.login-container {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
+.text-links form {
+    margin: 0; /* Remove default margins */
 }
 
-.login-container img {
-    width: 70px;
-    height: 50px;
-    cursor: pointer;
-}
-
-.login-container h2 {
-    margin-bottom: 20px;
-}
-
-input {
-    width: 90%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
-    width: 95%;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 10px 0;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-button:hover {
-    background-color: #0056b3;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.signup-link {
-    color: #008CBA;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 10px;
-}
-
-.signup-link:hover {
-    text-decoration: underline;
+.text-links .divider {
+    color: #cccccc;
+    margin: 0 5px; /* Spacing around the bar */
+    font-weight: bold;
 }
 
 .submit-text {
     text-decoration: underline;
-    color: blue;
+    color: #cccccc; /* A more visible gray */
     cursor: pointer;
+    transition: color 0.2s ease, transform 0.2s ease, text-shadow 0.2s ease; /* Smooth transitions */
 }
 
 .submit-text:hover {
-    cursor: pointer; /* Change cursor */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Add a 3D shadow effect */
-    transform: scale(1.05); /* Slightly scale the text for a pop effect */
+    cursor: pointer; /* Keep the pointer change */
+    color: #e0e0e0; /* Slightly lighter gray on hover */
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+    transform: scale(1.02); /* Minimal scaling for hover effect */
 }

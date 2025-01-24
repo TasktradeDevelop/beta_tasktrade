@@ -1,0 +1,65 @@
+/*
+auth 관련 page에 공통적으로 적용되는 design layout
+*/
+
+/* Extra body style */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Main login container */
+.auth-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.auth-container img {
+    width: 70px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.auth-container h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem; /* Normal font size */
+    white-space: nowrap; /* Prevent the text from wrapping */
+    overflow: hidden; /* Prevent visual overflow */
+    text-align: center; /* Center align the text */
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 95%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.caution-text {
+    font-size: 0.8rem; /* Adjust font size if necessary */
+    color: red;
+}

@@ -17,3 +17,13 @@ async def open_login_page(request: Request):
 @router.get("/signup", response_class=HTMLResponse)
 async def open_signup_page(request: Request):
     return templates.TemplateResponse("signup.html", {'request': request})
+
+
+@router.get("/search-id", response_class=HTMLResponse)
+async def open_search_id_page(request: Request):
+    return templates.TemplateResponse("search-id.html", {'request': request})
+
+
+@router.get("/search-pw", response_class=HTMLResponse)
+async def open_search_pw_page(request: Request):
+    return templates.TemplateResponse("search-pw.html", {'request': request})

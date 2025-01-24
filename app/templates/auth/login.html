@@ -7,6 +7,7 @@
     <!-- Link to external CSS -->
     <link rel="stylesheet" href="/static/css/main.css">
     <link rel="stylesheet" href="/static/css/pages/login.css">
+    <link rel="stylesheet" href="/static/css/components/auth.css">
 
     <!-- Link to external JS -->
     <script src="/static/js/main.js" defer></script>
@@ -14,7 +15,7 @@
 
 </head>
 <body>
-    <div class="login-container">
+    <div class="auth-container">
         <!-- 메인 페이지로 링크 -->
         <a href="/">
             <img src="/static/images/logo/task_trade_logo.jpeg" alt="Main Logo">
@@ -29,12 +30,26 @@
             <button type="submit">로그인</button>
         </form>
 
-        <!-- 회원가입 링크 with clickable text instead of button -->
-        <form id="signupForm" action="/auth/signup" method="get">
-            <!-- This is the clickable text styled as a link -->
-            <span class="submit-text" onclick="document.getElementById('signupForm').submit()">회원가입</span>
-        </form>
+        <div class="text-links">
+            <!-- 아이디 찾기 링크 -->
+            <form id="searchId" action="/auth/search-id" method="get">
+                <span class="submit-text" onclick="document.getElementById('searchId').submit()">아이디 찾기</span>
+            </form>
 
+            <div class="divider">|</div> <!-- Vertical bar -->
+
+            <!-- 비번 찾기 링크 -->
+            <form id="searchPW" action="/auth/search-pw" method="get">
+                <span class="submit-text" onclick="document.getElementById('searchPW').submit()">비밀번호 찾기</span>
+            </form>
+
+            <div class="divider">|</div>
+
+            <!-- 회원가입 링크 -->
+            <form id="signupForm" action="/auth/signup" method="get">
+                <span class="submit-text" onclick="document.getElementById('signupForm').submit()">회원가입</span>
+            </form>
+        </div>
     </div>
 </body>
 </html>

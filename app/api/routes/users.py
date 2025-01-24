@@ -10,5 +10,5 @@ router = APIRouter(
 
 
 @router.get("/profile", response_class=HTMLResponse)
-async def open_myprofile(request: Request):
-    return templates.TemplateResponse("myprofile.html", {'request': request})
+async def open_my_profile(request: Request):
+    return templates.TemplateResponse("my-profile.html", {'request': request})
