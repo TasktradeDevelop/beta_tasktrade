@@ -6,6 +6,7 @@
 
     <!-- Link to external CSS -->
     <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/components/auth.css">
     <link rel="stylesheet" href="/static/css/pages/signup.css">
 
     <!-- Link to external JS -->
@@ -14,8 +15,58 @@
 
 </head>
 <body>
-    <h1>나만의 부업 파트너 Task Trade</h1>
-    <h2>회원가입</h2>
-
+    <!-- Form for account creation inside a lightbox -->
+    <div class="auth-container">
+        <h2 id="container-title">Task Trade 회원가입</h2>
+        <form onsubmit="postSignup(event)">
+            <div class="form-group">
+                <label for="username">사용자 이름</label>
+                <input type="text" id="username" name="username" placeholder="사용자명" required>
+            </div>
+            <div class="form-group">
+                <label for="userid">아이디(이메일 입력)</label>
+                <div class="flex-row" id="input-email-form">
+                    <input type="email" id="userid" name="userid" placeholder="user@example.com" required>
+                    <button id="verify-email-popup" onclick="verifyEmail(event)">이메일 인증</button>
+                    <button id="re-verify-email-popup" onclick="reVerifyEmail(event)">다시 인증하기</button>
+                </div>
+                <div id="input-code-form">
+                    <div class="flex-row">
+                        <input type="text" id="id_verify" name="id_verify" placeholder="인증번호를 입력해주세요" maxlength="6">
+                        <button id="submit-email-code" onclick="submitCode(event)">인증번호 입력</button>
+                    </div>
+                    <div id="timer-container">
+                        <span id="timer-display">남은 시간: 00:00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>성별</label>
+                <div class="gender-options">
+                    <label><input type="radio" name="gender" value="남" required> 남자</label>
+                    <label><input type="radio" name="gender" value="여"> 여자</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="age">나이</label>
+                <input type="number" id="age" name="age" placeholder="나이" required>
+            </div>
+            <div class="form-group">
+                <label for="contact">전화번호(숫자만 입력)</label>
+                <input type="text" id="contact" name="contact" placeholder="01012345678" required>
+            </div>
+            <div class="form-group">
+                <label for="password">비밀번호</label>
+                <input type="password" id="password" name="password" placeholder="비밀번호" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">비밀번호 확인</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="비밀번호 확인" required>
+            </div>
+            <div class="form-group">
+                <button id="submit-account-form" type="submit">회원가입</button>
+            </div>
+        </form>
+    </div>
 </body>
 </html>

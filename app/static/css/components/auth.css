@@ -2,22 +2,39 @@
 auth 관련 page에 공통적으로 적용되는 design layout
 */
 
-/* Extra body style */
+/* Body and HTML Fixes */
 body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Full screen height */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    background-color: #f4f4f4;
 }
 
 /* Main login container */
 .auth-container {
     background-color: white;
-    padding: 20px;
+    padding: 20px 30px; /* Extra padding for spacing */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 100%;
+    max-width: 500px; /* Prevent it from growing too wide */
+    max-height: 90%; /* Allow it to grow but not exceed the viewport */
     text-align: center;
+    overflow-y: auto; /* Enable vertical scrolling if content grows */
+    position: relative; /* To prevent collapsing in flex environments */
+    box-sizing: border-box;
+}
+
+/* Title inside auth-container */
+.auth-container #container-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    white-space: nowrap; /* Prevent text wrapping */
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .auth-container img {
@@ -26,24 +43,23 @@ body {
     cursor: pointer;
 }
 
-.auth-container h2 {
-    margin-bottom: 20px;
-    font-size: 1.5rem; /* Normal font size */
-    white-space: nowrap; /* Prevent the text from wrapping */
-    overflow: hidden; /* Prevent visual overflow */
-    text-align: center; /* Center align the text */
-}
-
-input {
-    width: 90%;
+.auth-container input {
+    width: 100%;
+    margin-bottom: 10px;
     padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
+    font-size: 16px;
+    border: 1px solid #ddd;
     border-radius: 5px;
+    transition: border-color 0.3s ease;
 }
 
-button {
-    width: 95%;
+.auth-container input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.auth-container button {
+    width: 100%;
     padding: 10px;
     background-color: #007bff;
     color: white;
@@ -54,7 +70,7 @@ button {
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-button:hover {
+.auth-container button:hover {
     background-color: #0056b3;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -62,4 +78,11 @@ button:hover {
 .caution-text {
     font-size: 0.8rem; /* Adjust font size if necessary */
     color: red;
+}
+
+/* Ensure the container adapts dynamically */
+@media screen and (max-height: 600px) {
+    .auth-container {
+        max-height: 80%; /* For smaller screens */
+    }
 }

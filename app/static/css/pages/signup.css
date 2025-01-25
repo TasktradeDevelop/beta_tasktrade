@@ -1,3 +1,92 @@
 /*
 signup page에만 특화된 design layout
 */
+
+/* form group section */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Additional rule for WebKit browsers (e.g., Chrome, Edge, Safari) */
+.form-group input[type="number"]::-webkit-inner-spin-button,
+.form-group input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0; /* Removes default margin */
+}
+
+.form-group .gender-options {
+    display: flex;
+    justify-content: space-around;
+}
+
+.form-group .gender-options label {
+    font-weight: normal;
+}
+
+.form-group input[type="radio"] {
+    margin-right: 5px;
+}
+
+.caf-active-background {
+    background-color: #0056b3 !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Slightly prominent shadow */
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column; /* Stack rows vertically */
+    gap: 10px; /* Spacing between rows */
+}
+
+.flex-row {
+    display: flex;
+    gap: 10px;
+    align-items: center; /* Align input and button */
+}
+
+.flex-row input {
+    flex: 4; /* 80% width */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.flex-row button {
+    flex: 1; /* 20% width */
+    padding: 10px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.flex-row button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#input-email-form {
+    margin-bottom: 5px; /* Add space below the email form */
+}
+
+/* Timer styling */
+#timer-container {
+    text-align: left; /* Align timer to the left */
+    margin-top: 5px; /* Add spacing above the timer */
+}
+
+#timer-display {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
