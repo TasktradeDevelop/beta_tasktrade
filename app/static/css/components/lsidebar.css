@@ -39,7 +39,7 @@
 }
 
 /* to my profile link inside profile div */
-#to-myprofile {
+#to-my-profile {
     font-size: 1.1rem; /* Set the font size */
     color: #007bff; /* Blue color for the text */
     text-decoration: none; /* Remove underline (if any) */
@@ -49,7 +49,7 @@
     transition: color 0.3s ease, transform 0.2s ease; /* Smooth color and scale transitions */
 }
 
-#to-myprofile:hover {
+#to-my-profile:hover {
     color: #0056b3; /* Slightly darker blue on hover */
     transform: scale(1.05); /* Slightly enlarge the text on hover */
     text-decoration: underline; /* Underline effect on hover */

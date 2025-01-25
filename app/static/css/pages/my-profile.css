@@ -153,11 +153,21 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    justify-content: space-between; /* Space out buttons equally */
+    position: relative; /* Enables absolute positioning for children */
+    padding: 20px;
+    box-sizing: border-box; /* Ensures padding is included in the element's size */
 }
 
-.menu-section button {
-    width: 100%;
+/* Button Group (regular buttons) */
+.menu-section #menu-btn-group {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px; /* Space between buttons */
+}
+
+/* Buttons inside the group */
+.menu-section #menu-btn-group button {
+    width: 100%; /* Full width buttons */
     padding: 15px;
     font-size: 1rem;
     background-color: #007bff;
@@ -168,16 +178,29 @@
     transition: background-color 0.3s ease;
 }
 
-.menu-section button:hover {
+.menu-section #menu-btn-group button:hover {
     background-color: #0056b3;
 }
 
+/* Logout Button */
 .menu-section .logout {
+    position: absolute; /* Position relative to the menu-section */
+    bottom: 20px; /* Stick to the bottom of the container */
+    right: 20px; /* Slight spacing from the right edge */
     background-color: #ff4d4d;
+    width: 33%; /* One-third the width of the parent */
+    padding: 10px; /* Adjust padding for a smaller button size */
+    font-size: 0.9rem; /* Slightly smaller font */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .menu-section .logout:hover {
     background-color: #cc0000;
+    transform: scale(1.05); /* Subtle hover effect */
 }
 
 /* Responsive Design for Smaller Screens */
