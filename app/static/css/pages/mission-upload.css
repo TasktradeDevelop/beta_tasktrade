@@ -2,3 +2,115 @@
 테스크 업로드 페이지에만 적용되는 style
 */
 
+/* Left and Right Sections */
+.left-section, .right-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Flexible Width for Both Sections */
+.left-section {
+    flex: 1; /* Takes equal space */
+}
+
+.right-section {
+    flex: 1; /* Takes equal space */
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: none;
+}
+
+/* Mission Types, Age, Gender */
+.mission-types, .age-options, .gender-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.mission-types button,
+.age-options button,
+.gender-options button {
+    flex: 1 1 30%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.mission-types button:hover,
+.age-options button:hover,
+.gender-options button:hover {
+    background-color: #0056b3;
+}
+
+/* Money Settings */
+.money-settings {
+    display: flex;
+    gap: 10px;
+}
+
+.money-settings input {
+    flex: 1;
+}
+
+/* Success Rate */
+.success-rate {
+    display: flex;
+    align-items: center;
+}
+
+.success-rate input {
+    width: 50%;
+}
+
+/* Submit Button */
+#submit-mission {
+    width: 20%;
+    padding: 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#submit-mission:hover {
+    background-color: #218838;
+}
+
+/* Notes */
+.note {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}

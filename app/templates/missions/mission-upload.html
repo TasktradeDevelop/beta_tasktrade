@@ -2,10 +2,12 @@
 <html lang="ko">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
     <title>미션 등록</title>
 
     <!-- Link to external CSS -->
     <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/components/navbar.css">
     <link rel="stylesheet" href="/static/css/components/missions.css">
     <link rel="stylesheet" href="/static/css/pages/mission-upload.css">
 
@@ -16,6 +18,90 @@
 
 </head>
 <body>
-    <h2>Mission Upload Page</h2>
+    <header class="header">
+        <div class="logo">
+            <h1>미션 등록</h1>
+        </div>
+    </header>
+
+    <main class="mission-container">
+        <!-- Left Column -->
+        <section class="left-section">
+            <div class="form-group">
+                <label for="mission-title">미션 제목</label>
+                <input type="text" id="mission-title" placeholder="미션 제목을 입력하세요" required>
+            </div>
+
+            <div class="form-group">
+                <label>미션 유형</label>
+                <div class="mission-types">
+                    <button>Comedy</button>
+                    <button>Dance</button>
+                    <button>Daily</button>
+                    <button>Sexy</button>
+                    <button>Trip</button>
+                    <button>Music</button>
+                    <button>Sing</button>
+                    <button>Costume Play</button>
+                    <button>Event</button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>연령</label>
+                <div class="age-options">
+                    <button>미성년자</button>
+                    <button>성인</button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>본인 성별</label>
+                <div class="gender-options">
+                    <button>남성</button>
+                    <button>여성</button>
+                    <button>남녀공용</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Right Column -->
+        <section class="right-section">
+            <div class="form-group">
+                <label for="mission-description">미션 주제 설명</label>
+                <textarea id="mission-description" placeholder="미션 설명을 입력하세요" rows="4"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>미션 금액 설정</label>
+                <p class="note">최소금액과 최대금액 설정은 필수입니다.</p>
+                <div class="money-settings">
+                    <input type="number" id="min-amount" placeholder="최소금액">
+                    <input type="number" id="max-amount" placeholder="최대금액">
+                </div>
+                <div class="currency-setting">
+                    <label for="currency-amount">금액 선택</label>
+                    <input type="number" id="currency-amount" placeholder="금액 입력">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="success-rate">미션 성공 기준 퍼센트</label>
+                <div class="success-rate">
+                    <input type="number" id="success-rate" placeholder="%" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="duration">예상 소요 시간</label>
+                <p class="note">최소 5분 이상 설정 가능합니다.</p>
+                <input type="number" id="duration" placeholder="분">
+            </div>
+
+            <div class="form-group">
+                <button id="submit-mission">등록</button>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
