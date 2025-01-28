@@ -51,13 +51,49 @@
 
         <!-- Main Content -->
         <main class="main">
-            <section class="content">
-                <!-- Main Display -->
+            <section class="missions-content">
+                <!-- Popular Missions -->
+                <section class="display-mission" id="hot-missions">
+                    <h2>인기미션 Top 3</h2>
+                    <div class="mission-row">
+                        <div class="mission-card"></div>
+                        <div class="mission-card"></div>
+                        <div class="mission-card"></div>
+                    </div>
+                </section>
+
+                <!-- High Reward Missions -->
+                <section class="display-mission" id="high-reward-missions">
+                    <h2>높은 리워드 미션 Top 3</h2>
+                    <div class="mission-row">
+                        <div class="mission-card"></div>
+                        <div class="mission-card"></div>
+                        <div class="mission-card"></div>
+                    </div>
+                </section>
+
+                <!-- Advertisement Missions -->
+                <section class="display-mission" id="ad-missions">
+                    <h2>기업 및 광고 미션</h2>
+                    <div class="mission-row">
+                        <div class="mission-card"></div>
+                        <div class="mission-card"></div>
+                        <div class="mission-card"></div>
+                    </div>
+                </section>
+
+                <!-- Bottom Menu -->
+                <aside class="bottom-menu">
+                    <button class="menu-button" id="main-menu">Main Menu</button>
+                    <button class="menu-button" id="vip-upload">VIP 올리기</button>
+                    <button class="menu-button" id="ad-upload">광고 올리기</button>
+                </aside>
             </section>
-            <div class="buttons">
-                <button>내 퀘스트 보기</button>
-                <button>진행중인 이벤트</button>
-                <button>설계된 이벤트</button>
+
+            <div class="menu-link-buttons">
+                <button id="my-mission">내 미션 바로가기</button>
+                <button id="mission-upload" onclick="toMissionUpload()">미션 등록하기</button>
+                <button id="search-id-pw">아이디/비번 찾기</button>
             </div>
         </main>
 
