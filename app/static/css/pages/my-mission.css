@@ -1,0 +1,47 @@
+/*
+내 미션 페이지에 한정적으로 적용되는 style
+*/
+
+/* Right Panel */
+.right-panel {
+    flex: 0.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f4f4f4;
+    width: 300px; /* Fixed width for the panel */
+    border-left: 1px solid #ddd;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Rate Sections */
+.upper-rates, .lower-rates {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Spacing between boxes */
+}
+
+/* Common Style for Rate Boxes */
+.rate-box {
+    text-align: center;
+    background-color: white;
+    padding: 20px; /* Padding inside boxes */
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: default;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rate-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Specific Style for Lower Rates */
+.lower-rates .rate-box.small {
+    padding: 15px; /* Smaller padding for reduced size */
+    font-size: 0.9rem; /* Slightly smaller font */
+}

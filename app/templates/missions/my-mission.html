@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>내 미션</title>
+
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/components/navbar.css">
+    <link rel="stylesheet" href="/static/css/components/missions.css">
+    <link rel="stylesheet" href="/static/css/pages/my-mission.css">
+
+    <!-- Link to external JS -->
+    <script src="/static/js/main.js" defer></script>
+    <script src="/static/js/components/missions.js" defer></script>
+    <script src="/static/js/pages/my-mission.js" defer></script>
+
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>내 미션</h1>
+        </div>
+    </header>
+    <main class="mission-container">
+        <section class="missions-content">
+            <!-- Complete Missions -->
+            <section class="display-mission" id="complete-missions">
+                <h2>완료한 미션</h2>
+                <div class="mission-row">
+                    <div class="mission-card"></div>
+                    <div class="mission-card"></div>
+                    <div class="mission-card"></div>
+                </div>
+            </section>
+
+            <!-- Current Missions -->
+            <section class="display-mission" id="current-missions">
+                <h2>진행중인 미션</h2>
+                <div class="mission-row">
+                    <div class="mission-card"></div>
+                    <div class="mission-card"></div>
+                    <div class="mission-card"></div>
+                </div>
+            </section>
+
+            <!-- Failed Missions -->
+            <section class="display-mission" id="failed-missions">
+                <h2>실패한 미션</h2>
+                <div class="mission-row">
+                    <div class="mission-card"></div>
+                    <div class="mission-card"></div>
+                    <div class="mission-card"></div>
+                </div>
+            </section>
+        </section>
+        <aside class="right-panel">
+            <div class="upper-rates">
+                <div class="rate-box" id="submitted-missions">등록한 미션 개수</div>
+                <div class="rate-box" id="participation-rate">참여율</div>
+                <div class="rate-box" id="participant-reaction">참여자 반응</div>
+            </div>
+
+            <div class="lower-rates">
+                <div class="rate-box small" id="expected-payment">정산 예정 금액</div>
+                <div class="rate-box small" id="mission-failure-rate">내 미션 실패율</div>
+                <div class="rate-box small" id="mission-success-rate">내 미션 성공률</div>
+            </div>
+        </aside>
+    </main>
+</body>
+</html>
