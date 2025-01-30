@@ -9,6 +9,11 @@ router = APIRouter(
 )
 
 
+@router.get("/", response_class=HTMLResponse)
+async def open_missions_main_page(request: Request):
+    return templates.TemplateResponse("missions-main.html", {'request': request})
+
+
 @router.get("/my", response_class=HTMLResponse)
 async def open_my_mission_page(request: Request):
     return templates.TemplateResponse("my-mission.html", {'request': request})

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>미션</title>
+
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/components/navbar.css">
+    <link rel="stylesheet" href="/static/css/components/missions.css">
+    <link rel="stylesheet" href="/static/css/pages/missions-main.css">
+
+    <!-- Link to external JS -->
+    <script src="/static/js/main.js" defer></script>
+    <script src="/static/js/components/missions.js" defer></script>
+    <script src="/static/js/pages/missions-main.js" defer></script>
+
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>미션</h1>
+        </div>
+    </header>
+
+    <main class="mission-container">
+        <!-- Left Section -->
+        <section class="left-section">
+            <section class="missions-content">
+                <!-- Popular Missions -->
+                <section class="display-mission" id="hot-missions">
+                    <h2>최다 조회수</h2>
+                    <div class="mission-row">
+                        <div class="mission-card">
+                            <span>Top 1</span>
+                        </div>
+                        <div class="mission-card">
+                            <span>Top 2</span>
+                        </div>
+                        <div class="mission-card">
+                            <span>Top 3</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- High Reward Missions -->
+                <section class="display-mission" id="high-reward-missions">
+                    <h2>높은 리워드 미션</h2>
+                    <div class="mission-row">
+                        <div class="mission-card">
+                            <span>Top 1</span>
+                        </div>
+                        <div class="mission-card">
+                            <span>Top 2</span>
+                        </div>
+                        <div class="mission-card">
+                            <span>Top 3</span>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <!-- Mission Rank and Incentive Info -->
+            <aside class="missions-specific">
+                <div class="my-mission-rank">
+                    <h3>나의 미션 순위</h3>
+                    <ul>
+                        <li>동네순위: 2등</li>
+                        <li>지역순위: 19등</li>
+                        <li>국가순위: 246등</li>
+                    </ul>
+                </div>
+                <div class="mission-incentive-spec">
+                    <h3>미션 추가 인센티브 안내사항</h3>
+                    <ul>
+                        <li>동네별 TOP 10 -> 3% 추가지급</li>
+                        <li>지역별 TOP 100 -> 5% 추가지급</li>
+                        <li>국가별 TOP 1000 -> 10% 추가지급</li>
+                    </ul>
+                </div>
+            </aside>
+        </section>
+
+        <!-- Right Section -->
+        <section class="right-section">
+            <section class="missions-content">
+                <section class="display-mission" id="ad-missions">
+                    <h2>기업 및 광고 미션</h2>
+                    <div class="mission-grid">
+                        <div class="mission-card">
+                            <span>Top 1</span>s
+                        </div>
+                        <div class="mission-card">
+                            <span>Top 2</span>
+                        </div>
+                        <div class="mission-card">
+                            <span>Top 3</span>
+                        </div>
+                        <div class="mission-card">
+                            <span>Top 4</span>
+                        </div>
+                        <div class="mission-card">
+                            <span>Top 5</span>
+                        </div>
+                        <div class="mission-card">
+                            <span>Top 6</span>
+                        </div>
+                        <div class="mission-card">
+                            <span>Top 7</span>
+                        </div>
+                        <div class="mission-card">
+                            <span>Top 8</span>
+                        </div>
+                        <div class="mission-card">
+                            <span>Top 9</span>
+                        </div>
+                    </div>
+                    <button id="more-btn">더보기</button>
+                </section>
+            </section>
+        </section>
+    </main>
+</body>
+</html>

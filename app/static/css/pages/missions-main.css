@@ -1,0 +1,73 @@
+/*
+mission main page에만 특화된 design layout
+*/
+
+/* Left Section */
+.left-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%; /* Full height */
+}
+
+/* Right Section */
+.right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%; /* Full height */
+}
+
+/* Missions-Specific Section */
+.missions-specific {
+    flex: 0.5;
+    display: flex;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    gap: 20px; /* Space between inner sections */
+    height: 100%; /* Make it extend fully to the bottom */
+    align-items: stretch; /* Ensure children stretch to full height */
+}
+
+/* Mission Rank Section */
+.my-mission-rank {
+    flex: 1;
+    border-right: 1px solid #ddd; /* Add a vertical bar */
+    padding-right: 15px; /* Add spacing on the right */
+}
+
+/* Mission Incentive Section */
+.mission-incentive-spec {
+    flex: 3;
+    padding-left: 15px; /* Add spacing on the left */
+}
+
+/* Mission Grid */
+.mission-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+/* Smaller Button */
+#more-btn {
+    width: 30%; /* Adjust width */
+    padding: 8px; /* Smaller padding */
+    font-size: 0.8rem; /* Smaller font size */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 15px;
+}
+
+#more-btn:hover {
+    background-color: #0056b3;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
