@@ -14,9 +14,10 @@
 
 /* Missions Content */
 .missions-content {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Space between sections */
+    gap: 20px; /* Space between sections */mi
     height: 100%; /* Full height */
 }
 

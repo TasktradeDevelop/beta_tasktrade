@@ -4,13 +4,12 @@
 
 /* Right Panel */
 .right-panel {
-    flex: 0.2;
+    flex: 0 0 300px; /* Fixed width */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 20px;
     background-color: #f4f4f4;
-    width: 300px; /* Fixed width for the panel */
     border-left: 1px solid #ddd;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
 }

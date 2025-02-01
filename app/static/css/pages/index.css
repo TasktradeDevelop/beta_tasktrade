@@ -112,9 +112,7 @@ index page에만 특화된 design layout
     padding: 20px;
 }
 
-.ad-section,
-.inquiry-section,
-.notice-section {
+.right-panel div {
     flex: 1;
     background-color: #fff;
     border: 1px solid #ddd;
@@ -122,6 +120,45 @@ index page에만 특화된 design layout
     border-radius: 8px;
 }
 
-.notice-section h3 {
-    margin-bottom: 10px;
+/* Common Button Style */
+#user-guide, #faq-inquiry {
+    display: block;
+    width: 80%; /* Adjust width for the button */
+    margin: 15px auto; /* Center the button horizontally */
+    padding: 15px; /* Add space inside the button */
+    font-size: 1.2rem; /* Adjust the font size */
+    font-weight: bold; /* Make text stand out */
+    color: #333; /* Neutral text color */
+    background-color: #fff; /* White button background */
+    border: 2px solid #333; /* Dark border */
+    border-radius: 8px; /* Rounded corners */
+    text-align: center; /* Center text */
+    cursor: pointer; /* Show pointer cursor */
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+#user-guide:hover, #faq-inquiry:hover {
+    background-color: #f4f4f4; /* Light gray background on hover */
+    color: #000; /* Darker text color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+/* Specific Button IDs */
+#user-guide {
+    border-color: #007bff; /* Blue border for user guide */
+}
+
+#user-guide:hover {
+    background-color: #007bff; /* Blue background on hover */
+    color: #fff; /* White text */
+}
+
+#faq-inquiry {
+    border-color: #28a745; /* Green border for FAQ */
+}
+
+#faq-inquiry:hover {
+    background-color: #28a745; /* Green background on hover */
+    color: #fff; /* White text */
 }

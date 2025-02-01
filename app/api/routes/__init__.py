@@ -3,6 +3,7 @@ from .auth import router as auth_router
 from .users import router as users_router
 from .mission import router as mission_router
 from .coin import router as coin_router
+from .supports import router as supports_router
 
 # Create a main router to include all individual routers
 router = APIRouter()
@@ -12,3 +13,4 @@ router.include_router(auth_router)
 router.include_router(users_router)
 router.include_router(mission_router)
 router.include_router(coin_router)
+router.include_router(supports_router)

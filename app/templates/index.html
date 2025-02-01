@@ -9,10 +9,12 @@
     <link rel="stylesheet" href="/static/css/components/navbar.css">
     <link rel="stylesheet" href="/static/css/components/lsidebar.css">
     <link rel="stylesheet" href="/static/css/components/missions.css">
+    <link rel="stylesheet" href="/static/css/components/modal.css">
     <link rel="stylesheet" href="/static/css/pages/index.css">
 
     <!-- Link to external JS -->
     <script src="/static/js/main.js" defer></script>
+    <script src="/static/js/components/modal.js" defer></script>
     <script src="/static/js/components/navbar.js" defer></script>
     <script src="/static/js/components/lsidebar.js" defer></script>
     <script src="/static/js/pages/index.js" defer></script>
@@ -43,11 +45,11 @@
                 <li>중간 메뉴 1</li>
                 <li>중간 메뉴 2</li>
             </ul>
-            <ul class="sidebar-under-menu">
-                <li>약관</li>
-                <li>개인정보</li>
-                <li>회사정보</li>
-                <li>고객센터</li>
+            <ul class="sidebar-under-menu" id="support-links">
+                <li data-type="terms">약관</li>
+                <li data-type="personal-info">개인정보</li>
+                <li data-type="company-info">회사정보</li>
+                <li data-type="customer-center">고객센터</li>
             </ul>
         </aside>
 
@@ -103,11 +105,19 @@
         <aside class="right-panel">
             <div class="ad-section">광고 및 배너</div>
             <div class="inquiry-section">1:1 문의</div>
-            <div class="notice-section">
-                <h3>공지사항</h3>
-                <p>메일함에서 클릭하면 바로 공지사항 페이지 이동</p>
-            </div>
+            <div class="notice-section">공지사항</div>
         </aside>
     </div>
+
+    <div id="modal-overlay" class="hidden">
+        <div id="modal-content">
+            <button id="close-modal">×</button>
+            <h2>Example Page</h2>
+            <button id="user-guide" class="hidden">사용자 가이드 보기</button>
+            <button id="faq-inquiry" class="hidden">FAQ 및 1:1 문의하기</button>
+            <p>Here is the example content for the selected support type.</p>
+        </div>
+    </div>
+
 </body>
 </html>
