@@ -3,7 +3,7 @@ index page에만 특화된 design layout
 */
 
 /* Main container layout */
-.container {
+.index-container {
     display: flex;
     height: calc(100vh - 70px); /* Full height minus header */
     gap: 20px;
@@ -118,6 +118,10 @@ index page에만 특화된 design layout
     border: 1px solid #ddd;
     padding: 15px;
     border-radius: 8px;
+}
+
+.right-panel div:hover {
+    cursor: pointer;
 }
 
 /* Common Button Style */

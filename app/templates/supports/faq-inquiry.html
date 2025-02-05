@@ -2,9 +2,45 @@
 <html lang="ko">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
     <title>FAQ 및 1:1 문의</title>
+
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/components/navbar.css">
+    <link rel="stylesheet" href="/static/css/components/supports.css">
+    <link rel="stylesheet" href="/static/css/pages/faq-inquiry.css">
+
+    <!-- Link to external JS -->
+    <script src="/static/js/main.js" defer></script>
+    <script src="/static/js/pages/faq-inquiry.js" defer></script>
+
 </head>
 <body>
-    <h1>FAQ 및 1:1 문의</h1>
+    <header class="header">
+        <div class="logo">
+            <h1>FAQ 및 1:1 문의</h1>
+        </div>
+    </header>
+
+    <div class="supports-container">
+        <div class="faq-container">
+            <h2 class="container-title">FAQ</h2>
+            <div class="supports-item">faq 1</div>
+            <div class="supports-item">faq 2</div>
+            <div class="supports-item">faq 3</div>
+        </div>
+    </div>
+
+    <button class="inquiry-button" id="inquiryButton">1:1 문의하기</button>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="inquiry-container" id="inquiryContainer">
+        <h2 class="container-title">1:1 문의하기</h2>
+        <p>문의 내용을 작성해주세요.</p>
+        <!-- Add form or inquiry content here -->
+    </div>
+
 </body>
 </html>

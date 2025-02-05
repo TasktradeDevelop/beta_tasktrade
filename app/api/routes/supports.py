@@ -17,3 +17,8 @@ async def open_user_guide(request: Request):
 @router.get("/faq-n-inquiry", response_class=HTMLResponse)
 async def open_faq_n_inquiry(request: Request):
     return templates.TemplateResponse("faq-inquiry.html", {'request': request})
+
+
+@router.get("/notice-section", response_class=HTMLResponse)
+async def open_notice_section(request: Request):
+    return templates.TemplateResponse("notice-section.html", {'request': request})

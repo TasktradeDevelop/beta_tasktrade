@@ -1,0 +1,38 @@
+/*
+supports pages contents에 공통적으로 적용되는 design layout
+*/
+
+/* supports pages common container design */
+.supports-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container-title {
+    font-size: 24px; /* Larger font size */
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+    padding: 5px 10px;
+    background-color: transparent; /* Removed background */
+    border: none; /* Removed border */
+}
+
+.supports-item {
+    padding: 15px; /* Increased horizontal padding */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-color: #f4f4f4;
+    transition: background-color 0.3s;
+}
+
+.supports-item:hover {
+    background-color: #eaeaea;
+}

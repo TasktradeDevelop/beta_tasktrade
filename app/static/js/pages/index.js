@@ -1,6 +1,7 @@
 // index.html에 한정되어 직접 관련된 모든 js function
 
 // start on loading time
+// works for supports section elements
 document.addEventListener("DOMContentLoaded", function () {
     const handleSupportClick = (endpoint) => {
         fetch(`/supports/${endpoint}`, {
@@ -24,6 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.getElementById("user-guide").addEventListener("click", () => handleSupportClick('user-guide'));
     document.getElementById("faq-inquiry").addEventListener("click", () => handleSupportClick('faq-n-inquiry'));
+    document.getElementById("notice-section").addEventListener("click", () => handleSupportClick('notice-section'));
+    document.getElementById("inquiry-section").addEventListener("click", () => handleSupportClick('faq-n-inquiry'));
 });
 
 // link to my-profile.html

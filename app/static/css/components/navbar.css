@@ -31,3 +31,10 @@
 .nav button:hover {
     background-color: #e0e0e0;
 }
+
+/* go-back button on navbar */
+.back-button {
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+}

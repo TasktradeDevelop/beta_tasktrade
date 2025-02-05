@@ -1,0 +1,7 @@
+/*
+공지사항 페이지에 한정적인 design layout
+*/
+
+.notice-container {
+    padding: 15px; /* Added padding for more horizontal space */
+}
