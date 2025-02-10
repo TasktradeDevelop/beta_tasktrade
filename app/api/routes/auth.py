@@ -19,6 +19,11 @@ async def open_signup_page(request: Request):
     return templates.TemplateResponse("signup.html", {'request': request})
 
 
+@router.get("/search", response_class=HTMLResponse)
+async def open_search_auth_page(request: Request):
+    return templates.TemplateResponse("search-auth.html", {'request': request})
+
+
 @router.get("/search-id", response_class=HTMLResponse)
 async def open_search_id_page(request: Request):
     return templates.TemplateResponse("search-id.html", {'request': request})

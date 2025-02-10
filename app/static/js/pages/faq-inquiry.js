@@ -4,6 +4,9 @@
 document.addEventListener("DOMContentLoaded", function () {
     const inquiryButton = document.getElementById('inquiryButton');
     const inquiryContainer = document.getElementById('inquiryContainer');
+
+    const membershipButton = document.getElementById('membershipButton');
+    const membershipContainer = document.getElementById('membershipContainer');
     const overlay = document.getElementById('overlay');
 
     inquiryButton.addEventListener('click', () => {
@@ -15,4 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
         inquiryContainer.classList.remove('open');
         overlay.classList.remove('show');
     });
+
+
+
 });

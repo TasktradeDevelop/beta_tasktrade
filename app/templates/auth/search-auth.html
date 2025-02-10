@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>Task Trade 아이디 찾기</title>
+    <title>Task Trade 아이디/비번 찾기</title>
 
     <!-- Link to external CSS -->
     <link rel="stylesheet" href="/static/css/main.css">
@@ -20,13 +20,14 @@
             <img src="/static/images/logo/task_trade_logo.jpeg" alt="Main Logo">
         </a>
 
-        <!-- 아이디 찾기 폼 -->
-        <h2 id="container-title">Task Trade 아이디 찾기</h2>
+        <!-- 아이디 찾기 링크 -->
+        <form id="searchId" action="/auth/search-id" method="get">
+            <button class="submit-text" onclick="document.getElementById('searchId').submit()">아이디 찾기</button>
+        </form>
 
-        <form onsubmit="findId(event)">
-            <input type="text" id="user-name" placeholder="이름" required><br>
-            <input type="tel" id="user-contact" placeholder="전화번호" required><br>
-            <button type="submit">아이디 조회</button>
+        <!-- 비번 찾기 링크 -->
+        <form id="searchPW" action="/auth/search-pw" method="get">
+            <button class="submit-text" onclick="document.getElementById('searchPW').submit()">비밀번호 찾기</button>
         </form>
     </div>
 </body>

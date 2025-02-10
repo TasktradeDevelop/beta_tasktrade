@@ -56,7 +56,7 @@
 
         <!-- Main Content -->
         <main class="main">
-            <section class="missions-content">
+            <section class="missions-content" onclick="missionsMain()">
                 <!-- Popular Missions -->
                 <section class="display-mission" id="hot-missions">
                     <h2>인기미션 Top 3</h2>
@@ -87,18 +87,12 @@
                     </div>
                 </section>
 
-                <!-- Bottom Menu -->
-                <aside class="bottom-menu">
-                    <button class="menu-button" id="main-menu" onclick="missionsMain()">Main Menu</button>
-                    <button class="menu-button" id="vip-upload">VIP 올리기</button>
-                    <button class="menu-button" id="ad-upload">광고 올리기</button>
-                </aside>
             </section>
 
             <div class="menu-link-buttons">
                 <button id="my-mission" onclick="toMyMission()">내 미션 바로가기</button>
                 <button id="mission-upload" onclick="toMissionUpload()">미션 등록하기</button>
-                <button id="search-id-pw">아이디/비번 찾기</button>
+                <button id="search-id-pw" onclick="toSearchAuth()">아이디/비번 찾기</button>
             </div>
         </main>
 

@@ -46,10 +46,16 @@ mission main page에만 특화된 design layout
     padding-left: 15px; /* Add spacing on the left */
 }
 
-/* Mission Grid */
-.mission-grid {
+/* Mission Grids */
+.mission-3-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.mission-4-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
 }
 

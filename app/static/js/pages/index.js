@@ -149,3 +149,23 @@ function missionsMain() {
         alert('Failed to navigate to profile. Please try again.');
     });
 }
+
+function toSearchAuth() {
+    fetch('/auth/search', {
+        method: 'GET', // or 'POST', depending on your endpoint
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        // Navigate to the profile page
+        window.location.href = '/auth/search';
+    })
+    .catch(error => {
+        console.error('Error occurred while navigating to profile:', error);
+        alert('Failed to navigate to profile. Please try again.');
+    });
+}
