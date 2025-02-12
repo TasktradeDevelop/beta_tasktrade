@@ -9,7 +9,6 @@ faq 및 inquiries에 제한적인 css style
 .extra-button {
     position: fixed;
     bottom: 20px;
-    right: 20px;
     padding: 10px 20px;
     background-color: #007bff;
     color: white;
@@ -19,17 +18,40 @@ faq 및 inquiries에 제한적인 css style
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.inquiry-container {
+#membership-button {
+    left: 20px;
+}
+
+#inquiry-button {
+    right: 20px;
+}
+
+.side-container {
     position: fixed;
     top: 0;
-    right: -50%;
     width: 50%;
     height: 100%;
     background-color: #ffffff;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
-    border-left: 1px solid #ddd;
-    transition: right 0.3s;
+    border: 1px solid #ddd;
+    transition: transform 0.3s;
     z-index: 10;
+}
+
+#membership-side {
+    left: -50%;
+}
+
+#inquiry-side {
+    right: -50%;
+}
+
+#membership-side.open {
+    transform: translateX(100%);
+}
+
+#inquiry-side.open {
+    transform: translateX(-100%);
 }
 
 .overlay {
@@ -43,10 +65,73 @@ faq 및 inquiries에 제한적인 css style
     z-index: 5;
 }
 
-.inquiry-container.open {
-    right: 0;
-}
-
 .overlay.show {
     display: block;
+}
+
+.membership-options {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    padding: 20px;
+}
+
+.membership-box {
+    width: 120px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.membership-box:hover {
+    transform: scale(1.05);
+}
+
+.membership-header {
+    padding: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+.membership-body {
+    padding: 15px;
+    background-color: #f4f4f4;
+    border-top: 1px solid #000;
+}
+
+.bronze .membership-header { background-color: #cd7f32; }
+.silver .membership-header { background-color: #c0c0c0; }
+.gold .membership-header { background-color: #ffd700; }
+.red .membership-header { background-color: #dc143c; }
+.purple .membership-header { background-color: #800080; }
+
+.membership-description {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 10px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.inquiry-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+.inquiry-form input, .inquiry-form select, .inquiry-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.inquiry-form textarea {
+    resize: vertical;
+    height: 100px;
 }
