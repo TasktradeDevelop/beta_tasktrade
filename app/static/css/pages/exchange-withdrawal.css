@@ -10,8 +10,16 @@
 /* Total Assets Section */
 .total-assets {
     flex: 0; /* Allow it to take minimum space */
-    font-size: 1.2rem;
     margin-bottom: 20px;
+    background-color: #f9f9f9;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.total-assets h3 {
+    margin: 10px;
 }
 
 /* Transaction Section */
@@ -25,13 +33,13 @@
 .transaction-box {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Ensures inner content spreads evenly */
     background-color: #f9f9f9;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     height: 100%; /* Make the boxes extend to fill the height */
+    gap: 10px;
 }
 
 .transaction-box h3 {
@@ -52,6 +60,58 @@
 #withdrawal-history {
     flex: 1;
     min-height: 0; /* Prevent content overflow */
+}
+
+/* Transaction Item */
+.transaction-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 10px 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Date Column */
+.transaction-date {
+    font-size: 14px;
+    color: #666;
+    flex: 1; /* Takes space based on content */
+}
+
+/* Details Column */
+.transaction-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 2; /* Takes more space compared to the date */
+}
+
+.transaction-status.deposit {
+    font-size: 16px;
+    color: #28a745; /* Green for deposit */
+    font-weight: bold;
+}
+
+.transaction-status.withdraw {
+    font-size: 16px;
+    color: #dc3545; /* Red for withdraw */
+    font-weight: bold;
+}
+
+.transaction-time {
+    font-size: 12px;
+    color: #888;
+}
+
+/* Amount Column */
+.transaction-amount {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    text-align: right;
+    flex: 1; /* Takes space based on content */
 }
 
 #transaction-spec {

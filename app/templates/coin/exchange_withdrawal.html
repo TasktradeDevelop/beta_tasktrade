@@ -23,18 +23,32 @@
     <div class="container">
         <!-- Total Assets Section -->
         <div class="total-assets">
-            <p>보유금액: <span id="coin-balance">100,000 COIN</span></p>
+            <h3>보유금액: <span id="coin-balance">100,000 COIN</span></h3>
         </div>
 
         <!-- Transaction Section -->
         <div class="transaction-section">
             <div class="transaction-box" id="exchange-history">
                 <h3>교환내역</h3>
-                <p>교환 내역이 여기에 표시됩니다.</p>
+                <div class="transaction-item">
+                    <div class="transaction-date">02.13</div>
+                    <div class="transaction-details">
+                        <span class="transaction-status deposit">교환완료</span>
+                        <span class="transaction-time">18:13</span>
+                    </div>
+                    <div class="transaction-amount">10,000 원</div>
+                </div>
             </div>
             <div class="transaction-box" id="withdrawal-history">
                 <h3>출금내역</h3>
-                <p>출금 내역이 여기에 표시됩니다.</p>
+                <div class="transaction-item">
+                    <div class="transaction-date">02.13</div>
+                    <div class="transaction-details">
+                        <span class="transaction-status withdraw">출금완료</span>
+                        <span class="transaction-time">18:22</span>
+                    </div>
+                    <div class="transaction-amount">-5,000 원</div>
+                </div>
             </div>
             <div class="transaction-box" id="transaction-spec">
                 <h3>교환 및 안내사항</h3>
