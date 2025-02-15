@@ -1,0 +1,144 @@
+<!-- 엔티티 관계도 코드입니다. 지난번에 회의후 올렸던 관계도입니다.--!>
+<!-- https://dbdiagram.io/d/67968bf7263d6cf9a01a4ae4 --!>
+
+Table demo_users {
+  id Long [primary key]
+  userid String [unique]
+  username String
+  password String
+  gender String
+  age Int
+  contact_number String
+  balance_encrypted Float
+  last_login Timestamp
+  created_at Timestamp
+  is_active Boolean
+}
+
+Table demo_inquiries {
+  id Long [primary key]
+  inquiry_title String
+  inquiry_content String
+  userid Long
+  created_at Timestamp
+  updated_at Timestamp
+  is_answered Boolean
+}
+
+Table demo_quests {
+  id Long [primary key]
+  quest_title String
+  quest_type String
+  quest_specifics String
+  quest_conditions String
+  quest_budget Float
+  quest_personnel Int
+  quest_period String
+  userid Long
+  created_at Timestamp
+  updated_at Timestamp
+  quest_status String
+}
+
+Table demo_transaction_log {
+  transaction_id Long [primary key]
+  userid Long
+  transaction_type String
+  amount_encrypted Float
+  balance_after Float
+  created_at Timestamp
+  transaction_description String
+  transaction_status String
+}
+Table demo_friends {
+  id Long [primary key]
+  user_id Long
+  friend_id Long
+  created_at Timestamp
+}
+
+Table demo_liked_quests {
+  id Long [primary key]
+  user_id Long
+  quest_id Long
+  created_at Timestamp
+}
+
+Table demo_missions {
+  id Long [primary key]
+  mission_title String
+  mission_price Float
+  mission_description String
+  created_at Timestamp
+}
+
+Table demo_profile_updates {
+  id Long [primary key]
+  user_id Long
+  updated_field String
+  old_value String
+  new_value String
+  updated_at Timestamp
+}
+
+Table demo_quest_conditions {
+  id Long [primary key]
+  quest_id Long
+  condition_type String
+  condition_value String
+  created_at Timestamp
+}
+
+Table demo_quest_images {
+  id Long [primary key]
+  quest_id Long
+  image_path String
+  created_at Timestamp
+}
+
+Table demo_contact_updates {
+  id Long [primary key]
+  user_id Long
+  old_contact_number String
+  new_contact_number String
+  updated_at Timestamp
+}
+
+Table demo_userid_updates {
+  id Long [primary key]
+  user_id Long
+  old_userid String
+  new_userid String
+  updated_at Timestamp
+}
+
+Table demo_username_updates {
+  id Long [primary key]
+  user_id Long
+  old_username String
+  new_username String
+  updated_at Timestamp
+}
+
+Table demo_password_updates {
+  id Long [primary key]
+  user_id Long
+  old_password String
+  new_password String
+  updated_at Timestamp
+}
+
+Ref: demo_inquiries.userid > demo_users.id
+Ref: demo_quests.userid > demo_users.id
+Ref: demo_transaction_log.userid > demo_users.id
+Ref: demo_friends.user_id > demo_users.id
+Ref: demo_friends.friend_id > demo_users.id
+Ref: demo_liked_quests.user_id > demo_users.id
+Ref: demo_liked_quests.quest_id > demo_quests.id
+Ref: demo_profile_updates.user_id > demo_users.id
+Ref: demo_quest_conditions.quest_id > demo_quests.id
+Ref: demo_quest_images.quest_id > demo_quests.id
+Ref: demo_contact_updates.user_id > demo_users.id
+Ref: demo_userid_updates.user_id > demo_users.id
+Ref: demo_username_updates.user_id > demo_users.id
+Ref: demo_password_updates.user_id > demo_users.id
