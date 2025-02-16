@@ -23,6 +23,7 @@
 
 /* Each Mission Section */
 .display-mission {
+    position: relative;
     background-color: transparent; /* Remove individual backgrounds */
     padding: 10px 0; /* Remove individual padding */
     border: none; /* Remove borders */

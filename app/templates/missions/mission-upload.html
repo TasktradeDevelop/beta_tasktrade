@@ -76,11 +76,8 @@
                 <label>미션 금액 설정</label>
                 <p class="note">최소금액과 최대금액 설정은 필수입니다.</p>
                 <div class="money-settings">
-                    <input type="number" id="min-amount" placeholder="최소금액">
-                    <input type="number" id="max-amount" placeholder="최대금액">
-                </div>
-                <div class="currency-setting">
-                    <label for="currency-amount">금액 선택</label>
+                    <button type="button" id="min-amount">최소금액</button>
+                    <button type="button" id="max-amount">최대금액</button>
                     <input type="number" id="currency-amount" placeholder="금액 입력">
                 </div>
             </div>
@@ -98,7 +95,7 @@
                 <input type="number" id="duration" placeholder="분">
             </div>
 
-            <div class="form-group">
+            <div class="form-group" id="submit-mission-btn">
                 <button id="submit-mission">등록</button>
             </div>
         </section>

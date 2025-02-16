@@ -59,6 +59,13 @@ mission main page에만 특화된 design layout
     gap: 10px;
 }
 
+.more-btn-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;    /* Centers vertically */
+    width: 100%;
+}
+
 /* Smaller Button */
 #more-btn {
     width: 30%; /* Adjust width */

@@ -135,3 +135,22 @@ faq 및 inquiries에 제한적인 css style
     resize: vertical;
     height: 100px;
 }
+
+#inquiry-submit {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+#inquiry-submit:hover {
+    background-color: #45a049;
+}

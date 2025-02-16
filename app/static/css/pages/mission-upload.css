@@ -4,6 +4,9 @@
 
 /* Left and Right Sections */
 .left-section, .right-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distributes items evenly */
     padding: 20px;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
@@ -17,6 +20,7 @@
 }
 
 .right-section {
+    position: relative;
     flex: 1; /* Takes equal space */
 }
 
@@ -44,18 +48,48 @@
     resize: none;
 }
 
-/* Mission Types, Age, Gender */
-.mission-types, .age-options, .gender-options {
+/* Container Styles */
+.mission-types,
+.age-options,
+.gender-options {
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    flex-wrap: wrap; /* Allows buttons to wrap to the next line if necessary */
+    justify-content: space-between; /* Evenly distributes buttons with equal space between them */
+    gap: 20px; /* Adjusts the space between buttons */
+    padding: 20px; /* Adds padding inside the container */
 }
 
+/* Button Styles */
 .mission-types button,
 .age-options button,
 .gender-options button {
-    flex: 1 1 30%;
+    flex: 1 1 calc(30% - 20px); /* Adjusts width: 30% minus the gap to ensure proper spacing */
+    height: 40px; /* Increases button height */
     padding: 10px;
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    border: none; /* Removes default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.mission-types button:hover,
+.age-options button:hover,
+.gender-options button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Money Settings */
+.money-settings {
+    display: flex;
+    width: 100%;
+}
+
+.money-settings button {
+    flex: 1;
+    padding: 10px;
+    margin-right: 10px; /* Space between buttons */
     background-color: #007bff;
     color: white;
     border: none;
@@ -64,21 +98,27 @@
     transition: background-color 0.3s ease;
 }
 
-.mission-types button:hover,
-.age-options button:hover,
-.gender-options button:hover {
+.money-settings button:last-of-type {
+    margin-right: 20px; /* Space between the last button and the input */
+}
+
+.money-settings button:hover {
     background-color: #0056b3;
 }
 
-/* Money Settings */
-.money-settings {
-    display: flex;
-    gap: 10px;
+#currency-amount {
+    flex: 2;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
-.money-settings input {
-    flex: 1;
+#currency-amount::-webkit-inner-spin-button,
+#currency-amount::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0; /* Removes default margin */
 }
+
 
 /* Success Rate */
 .success-rate {
@@ -92,6 +132,9 @@
 
 /* Submit Button */
 #submit-mission {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
     width: 20%;
     padding: 15px;
     background-color: #28a745;
