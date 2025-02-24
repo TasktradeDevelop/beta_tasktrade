@@ -3,6 +3,11 @@
 */
 
 /* Exclusive Header Section */
+.header {
+    background-color: #fee4e5; /* First option */
+    /* background-color: #fafecb; */ /* Second option */
+}
+
 .header-exclusive {
     display: flex;
     flex-direction: row;
@@ -10,6 +15,7 @@
 }
 
 .header-exclusive h1 {
+    color: gray;
     margin-top: 5px; /* for exclusive alignment */
 }
 
@@ -40,6 +46,10 @@
     flex-direction: column;
     gap: 20px;
     justify-content: space-between; /* Space out buttons equally */
+    background-image: url('/static/images/background/profile-background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top top;
 }
 
 /* Profile Section */
@@ -156,11 +166,15 @@
 /* Menu Section */
 .menu-section {
     flex: 1;
+    background-color: #fee4e5; /* First option */
+    /* background-color: #fafecb; */ /* Second option */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     gap: 10px;
     position: relative; /* Enables absolute positioning for children */
-    padding: 20px;
     box-sizing: border-box; /* Ensures padding is included in the element's size */
 }
 
@@ -176,8 +190,9 @@
     width: 100%; /* Full width buttons */
     padding: 15px;
     font-size: 1rem;
-    background-color: #007bff;
-    color: white;
+    background-color: #b35d7d; /* First option */
+    /* background-color: #5f8f3d; */ /* Second option */
+    color: #ffffff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -185,7 +200,8 @@
 }
 
 .menu-section #menu-btn-group button:hover {
-    background-color: #0056b3;
+    background-color: #914a65; /* First option */
+    /* background-color: #4a722f; */ /* Second option */
 }
 
 /* Logout Button */

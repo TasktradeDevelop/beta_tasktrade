@@ -65,8 +65,8 @@ function toExcWith() {
         window.location.href = '/coin';
     })
     .catch(error => {
-        console.error('Error occurred while navigating to profile:', error);
-        alert('Failed to navigate to profile. Please try again.');
+        console.error('Error occurred while navigating to exchange-withdrawal:', error);
+        alert('Failed to navigate to exchange-withdrawal page. Please try again.');
     });
 }
 
@@ -85,8 +85,28 @@ function login() {
         window.location.href = '/auth/login';
     })
     .catch(error => {
-        console.error('Error occurred while navigating to profile:', error);
-        alert('Failed to navigate to profile. Please try again.');
+        console.error('Error occurred while navigating to login page:', error);
+        alert('Failed to navigate to login page. Please try again.');
+    });
+}
+
+function signup() {
+    fetch('/auth/signup', {
+        method: 'GET', // or 'POST', depending on your endpoint
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        // Navigate to the profile page
+        window.location.href = '/auth/signup';
+    })
+    .catch(error => {
+        console.error('Error occurred while navigating to signup page:', error);
+        alert('Failed to navigate to signup page. Please try again.');
     });
 }
 
@@ -105,8 +125,8 @@ function toMissionUpload() {
         window.location.href = '/mission/upload';
     })
     .catch(error => {
-        console.error('Error occurred while navigating to profile:', error);
-        alert('Failed to navigate to profile. Please try again.');
+        console.error('Error occurred while navigating to mission-upload page:', error);
+        alert('Failed to navigate to mission-upload page. Please try again.');
     });
 }
 
@@ -125,8 +145,8 @@ function toMyMission() {
         window.location.href = '/mission/my';
     })
     .catch(error => {
-        console.error('Error occurred while navigating to profile:', error);
-        alert('Failed to navigate to profile. Please try again.');
+        console.error('Error occurred while navigating to my-mission page:', error);
+        alert('Failed to navigate to my-mission page. Please try again.');
     });
 }
 
@@ -145,8 +165,8 @@ function missionsMain() {
         window.location.href = '/mission';
     })
     .catch(error => {
-        console.error('Error occurred while navigating to profile:', error);
-        alert('Failed to navigate to profile. Please try again.');
+        console.error('Error occurred while navigating to main-mission page:', error);
+        alert('Failed to navigate to main-mission page. Please try again.');
     });
 }
 
@@ -165,7 +185,7 @@ function toSearchAuth() {
         window.location.href = '/auth/search';
     })
     .catch(error => {
-        console.error('Error occurred while navigating to profile:', error);
-        alert('Failed to navigate to profile. Please try again.');
+        console.error('Error occurred while navigating to search-auth page:', error);
+        alert('Failed to navigate to search-auth page. Please try again.');
     });
 }

@@ -1,6 +1,8 @@
 from fastapi import APIRouter, Request
-from starlette.responses import HTMLResponse
+from starlette.responses import HTMLResponse, JSONResponse
 from starlette.templating import Jinja2Templates
+
+from ..schemas.auth import LoginData
 
 templates = Jinja2Templates(directory="templates/auth")
 
@@ -32,3 +34,9 @@ async def open_search_id_page(request: Request):
 @router.get("/search-pw", response_class=HTMLResponse)
 async def open_search_pw_page(request: Request):
     return templates.TemplateResponse("search-pw.html", {'request': request})
+
+
+@router.post("login/submit")
+async def login(login_data: LoginData):
+    print(f"Successfully received {login_data.userid} and {login_data.password}")
+    return JSONResponse(status_code=200, content={"message": "Login successful"})

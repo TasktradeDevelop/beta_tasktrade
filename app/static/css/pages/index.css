@@ -6,20 +6,26 @@ index page에만 특화된 design layout
 .index-container {
     display: flex;
     height: calc(100vh - 70px); /* Full height minus header */
-    gap: 20px;
+    gap: 10px;
 }
 
 /* Main content section */
-.main {
+.main,
+.right-panel
+{
     flex: 3;
     background-color: #f9f9f9; /* Unified background */
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px; /* Rounded edges for the entire container */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Unified shadow */
     display: flex;
     flex-direction: column;
     gap: 20px; /* Spacing between content and bottom menu */
-    margin: 20px 0px;
+    margin: 20px 10px;
+    background-image: url('/static/images/background/purple-gradation.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 
@@ -103,15 +109,6 @@ index page에만 특화된 design layout
 }
 
 /* Right Panel */
-.right-panel {
-    flex: 3;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    background-color: #f4f4f4;
-    padding: 20px;
-}
-
 .right-panel div {
     flex: 1;
     background-color: #fff;

@@ -6,10 +6,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #007bff;
     padding: 20px 40px; /* Increased padding for more height and spacing */
     color: white;
     min-height: 60px; /* Ensures a consistent minimum height */
+}
+
+.header {
+    background-color: #ac97d8;
 }
 
 .header h1 {
@@ -20,7 +23,7 @@
 .nav button {
     margin-left: 10px;
     background-color: white;
-    color: #007bff;
+    color: #ac97d8;
     border: none;
     padding: 8px 15px; /* Increased padding for a larger button size */
     cursor: pointer;
@@ -30,6 +33,14 @@
 
 .nav button:hover {
     background-color: #e0e0e0;
+}
+
+.nav.active {
+    display: block;
+}
+
+.nav.hidden {
+    display: none;
 }
 
 /* go-back button on navbar */
