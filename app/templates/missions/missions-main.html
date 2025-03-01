@@ -8,11 +8,13 @@
     <!-- Link to external CSS -->
     <link rel="stylesheet" href="/static/css/main.css">
     <link rel="stylesheet" href="/static/css/components/navbar.css">
+    <link rel="stylesheet" href="/static/css/components/modal.css">
     <link rel="stylesheet" href="/static/css/components/missions.css">
     <link rel="stylesheet" href="/static/css/pages/missions-main.css">
 
     <!-- Link to external JS -->
     <script src="/static/js/main.js" defer></script>
+    <script src="/static/js/components/modal.js" defer></script>
     <script src="/static/js/components/missions.js" defer></script>
     <script src="/static/js/pages/missions-main.js" defer></script>
 
@@ -85,7 +87,6 @@
         <!-- Right Section -->
         <section class="right-section">
             <section class="missions-content">
-
                 <!-- New missions -->
                 <section class="display-mission" id="new-missions">
                     <h2>새로운 미션</h2>
@@ -120,6 +121,7 @@
                 <!-- Ad missions -->
                 <section class="display-mission" id="ad-missions">
                     <h2>기업 및 광고 미션</h2>
+                    <p>성공시 5% 추가적립</p>
                     <div class="mission-3-grid">
                         <div class="mission-card">
                             <span>Top 1</span>
@@ -140,13 +142,18 @@
                             <span>Top 6</span>
                         </div>
                     </div>
-
-                    <div class="more-btn-container">
-                        <button id="more-btn">더보기</button>
-                    </div>
                 </section>
             </section>
         </section>
     </main>
+
+    <div id="modal-overlay" class="hidden">
+        <div id="modal-content">
+            <button id="close-modal">×</button>
+            <h2>미션 정보</h2>
+            <p>여기에 미션 설명이 표시됩니다.</p>
+        </div>
+    </div>
+
 </body>
 </html>

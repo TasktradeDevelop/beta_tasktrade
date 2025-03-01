@@ -14,13 +14,13 @@ mission main page에만 특화된 design layout
     height: 100%; /* Full height */
     padding: 15px;
     border-radius: 8px;
-    background-color: var(--purple-600);
+    background-color: var(--purple-300);
     box-shadow: 0 2px 5px var(--black-1000-10);
 }
 
 /* Missions-Specific Section */
 .missions-specific {
-    flex: 0.5;
+    flex: 0.3;
     display: flex;
     background-color: var(--purple-400);
     padding: 15px;

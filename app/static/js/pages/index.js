@@ -2,32 +2,70 @@
 
 // start on loading time
 // works for supports section elements
+// index.js - Handles modals for support-related content
 document.addEventListener("DOMContentLoaded", function () {
-    const handleSupportClick = (endpoint) => {
+    const userGuide = document.getElementById("user-guide");
+    const faqInquiry = document.getElementById("faq-inquiry");
+
+    async function loadSupportContent(type) {
+        try {
+            if (type === "customer-center") {
+                userGuide.classList.remove("hidden");
+                faqInquiry.classList.remove("hidden");
+                modalUtils.openModal("고객센터", "고객센터 정보를 확인하세요.");
+            } else {
+                userGuide.classList.add("hidden");
+                faqInquiry.classList.add("hidden");
+
+                const response = await fetch(`/static/supports/${type}.txt`);
+                if (!response.ok) throw new Error("File not found");
+                const text = await response.text();
+                modalUtils.openModal(getTitle(type), text);
+            }
+        } catch (error) {
+            modalUtils.openModal("Error", "지원 내용을 불러오지 못했습니다.");
+        }
+    }
+
+    function getTitle(type) {
+        const titles = {
+            "terms": "이용 약관",
+            "personal-info": "개인정보 보호정책",
+            "company-info": "회사 정보",
+            "customer-center": "고객센터"
+        };
+        return titles[type] || "지원 문서";
+    }
+
+    document.querySelectorAll("#support-links li").forEach((item) => {
+        item.addEventListener("click", function () {
+            const type = item.getAttribute("data-type");
+            loadSupportContent(type);
+        });
+    });
+
+    // External Support Links Handling
+    function handleSupportClick(endpoint) {
         fetch(`/supports/${endpoint}`, {
             method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-            },
+            headers: { 'Content-Type': 'application/json' },
         })
         .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
-            }
-            // Navigate to the corresponding page
+            if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
             window.location.href = `/supports/${endpoint}`;
         })
         .catch(error => {
             console.error(`Error occurred while navigating to ${endpoint}:`, error);
             alert(`Failed to navigate to ${endpoint}. Please try again.`);
         });
-    };
+    }
 
     document.getElementById("user-guide").addEventListener("click", () => handleSupportClick('user-guide'));
     document.getElementById("faq-inquiry").addEventListener("click", () => handleSupportClick('faq-n-inquiry'));
     document.getElementById("notice-section").addEventListener("click", () => handleSupportClick('notice-section'));
     document.getElementById("inquiry-section").addEventListener("click", () => handleSupportClick('faq-n-inquiry'));
 });
+
 
 // link to my-profile.html
 function toMyProfile() {
