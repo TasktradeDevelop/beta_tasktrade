@@ -2,10 +2,12 @@
 페이지 왼쪽 사이드바에 대한 design style
 */
 
+@import url('../utilities/colors.css');
+
 .sidebar {
     flex: 1;
     width: 20%;
-    background-color: #bfa8f0;
+    background-color: var(--purple-400);
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -26,7 +28,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
+    background-color: var(--gray-100);
     border-radius: 8px;
     margin-bottom: 20px;
     overflow: hidden;
@@ -41,7 +43,7 @@
 /* to my profile link inside profile div */
 #to-my-profile {
     font-size: 1.1rem; /* Set the font size */
-    color: #007bff; /* Blue color for the text */
+    color: var(--blue-500); /* Blue color for the text */
     text-decoration: none; /* Remove underline (if any) */
     cursor: pointer; /* Show pointer cursor on hover */
     margin-top: 10px; /* Add some spacing from the profile photo */
@@ -50,7 +52,7 @@
 }
 
 #to-my-profile:hover {
-    color: #0056b3; /* Slightly darker blue on hover */
+    color: var(--blue-700); /* Slightly darker blue on hover */
     transform: scale(1.05); /* Slightly enlarge the text on hover */
     text-decoration: underline; /* Underline effect on hover */
 }
@@ -74,7 +76,7 @@
     padding: 10px 0;
     margin: 0;
     width: 100%; /* Stretch to sidebar width */
-    border-top: 2px solid #ccc; /* Gray bar at the top */
+    border-top: 2px solid var(--gray-400); /* Gray bar at the top */
 }
 
 .sidebar-under-menu li {

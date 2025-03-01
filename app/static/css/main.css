@@ -12,8 +12,8 @@ utility classes, such as :hidden, :active
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: var(--gray-150);
+    color: var(--gray-1000);
     margin: 0;
     padding: 0;
 }

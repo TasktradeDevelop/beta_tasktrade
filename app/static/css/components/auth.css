@@ -2,6 +2,8 @@
 auth 관련 page에 공통적으로 적용되는 design layout
 */
 
+@import url('../utilities/colors.css');
+
 /* Body and HTML Fixes */
 body {
     margin: 0;
@@ -10,15 +12,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f4f4f4;
+    background-color: var(--gray-150);
 }
 
 /* Main login container */
 .auth-container {
-    background-color: white;
+    background-color: var(--gray-100);
     padding: 20px 30px; /* Extra padding for spacing */
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px var(--black-1000-10);
     width: 100%;
     max-width: 500px; /* Prevent it from growing too wide */
     max-height: 90%; /* Allow it to grow but not exceed the viewport */
@@ -48,21 +50,21 @@ body {
     margin-bottom: 10px;
     padding: 10px;
     font-size: 16px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--gray-350);
     border-radius: 5px;
     transition: border-color 0.3s ease;
 }
 
 .auth-container input:focus {
-    border-color: #007bff;
+    border-color: var(--blue-500);
     outline: none;
 }
 
 .auth-container button {
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
-    color: white;
+    background-color: var(--blue-500);
+    color: var(--gray-100);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -71,13 +73,13 @@ body {
 }
 
 .auth-container button:hover {
-    background-color: #0056b3;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: var(--blue-700);
+    box-shadow: 0 4px 10px var(--black-1000-20);
 }
 
 .caution-text {
     font-size: 0.8rem; /* Adjust font size if necessary */
-    color: red;
+    color: var(--red-500);
 }
 
 /* Ensure the container adapts dynamically */

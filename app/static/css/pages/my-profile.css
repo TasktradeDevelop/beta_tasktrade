@@ -2,6 +2,8 @@
 내 프로필 창의 전반적인 design style을 포함
 */
 
+@import url('../utilities/colors.css');
+
 /* Exclusive Header Section */
 .header {
     background-color: #fee4e5; /* First option */

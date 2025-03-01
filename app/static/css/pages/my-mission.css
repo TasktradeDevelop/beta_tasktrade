@@ -9,9 +9,9 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 20px;
-    background-color: #f4f4f4;
-    border-left: 1px solid #ddd;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    background-color: var(--gray-150);
+    border-left: 1px solid var(--gray-350);
+    box-shadow: -2px 0 5px var(--black-1000-10);
 }
 
 /* Rate Sections */
@@ -24,19 +24,19 @@
 /* Common Style for Rate Boxes */
 .rate-box {
     text-align: center;
-    background-color: white;
+    background-color: var(--gray-100);
     padding: 20px; /* Padding inside boxes */
     font-size: 1rem;
-    border: 1px solid #ddd;
+    border: 1px solid var(--gray-350);
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px var(--black-1000-10);
     cursor: default;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .rate-box:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px var(--black-1000-20);
 }
 
 /* Specific Style for Lower Rates */

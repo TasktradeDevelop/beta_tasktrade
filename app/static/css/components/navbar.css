@@ -2,17 +2,19 @@
 페이지 상단 navigation bar에 대한 design styles
 */
 
+@import url('../utilities/colors.css');
+
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px; /* Increased padding for more height and spacing */
-    color: white;
+    color: var(--gray-100); /* Changed from hardcoded white to gray-100 */
     min-height: 60px; /* Ensures a consistent minimum height */
 }
 
 .header {
-    background-color: #ac97d8;
+    background-color: var(--purple-500);
 }
 
 .header h1 {
@@ -22,8 +24,8 @@
 
 .nav button {
     margin-left: 10px;
-    background-color: white;
-    color: #ac97d8;
+    background-color: var(--gray-100);
+    color: var(--purple-500);
     border: none;
     padding: 8px 15px; /* Increased padding for a larger button size */
     cursor: pointer;
@@ -32,7 +34,7 @@
 }
 
 .nav button:hover {
-    background-color: #e0e0e0;
+    background-color: var(--gray-300);
 }
 
 .nav.active {
@@ -47,5 +49,5 @@
 .back-button {
     font-size: 18px;
     text-decoration: none;
-    color: black;
+    color: var(--gray-1100);
 }

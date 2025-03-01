@@ -2,6 +2,8 @@
 미션 관련 페이지에 공통적으로 적용되는 style
 */
 
+@import url('../utilities/colors.css');
+
 /* General Container */
 .mission-container {
     display: flex;
@@ -17,7 +19,7 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Space between sections */mi
+    gap: 20px; /* Space between sections */
     height: 100%; /* Full height */
 }
 
@@ -33,7 +35,7 @@
 .display-mission h2 {
     font-size: 1rem;
     margin-bottom: 10px;
-    color: #333;
+    color: var(--gray-1000);
 }
 
 /* Row of Mission Cards */
@@ -41,20 +43,22 @@
     display: flex;
     justify-content: space-between;
     gap: 10px;
+    margin: 10px;
 }
 
 /* Mission Card */
 .mission-card {
     flex: 1;
     height: 120px; /* Increased height */
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: var(--gray-100);
+    border: 1px solid var(--gray-350);
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px var(--black-1000-10);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: visible;
 }
 
 .mission-card:hover {
     transform: scale(1.02);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px var(--black-1000-20);
 }

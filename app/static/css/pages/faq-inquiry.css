@@ -2,6 +2,8 @@
 faq 및 inquiries에 제한적인 css style
 */
 
+@import url('../utilities/colors.css');
+
 .faq-container {
     padding: 15px;
 }
@@ -10,12 +12,12 @@ faq 및 inquiries에 제한적인 css style
     position: fixed;
     bottom: 20px;
     padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
+    background-color: var(--blue-600); /* Medium Dark Blue */
+    color: var(--gray-100); /* Pure White */
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px var(--black-1000-10);
 }
 
 #membership-button {
@@ -31,9 +33,9 @@ faq 및 inquiries에 제한적인 css style
     top: 0;
     width: 50%;
     height: 100%;
-    background-color: #ffffff;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ddd;
+    background-color: var(--gray-100); /* Pure White */
+    box-shadow: -2px 0 5px var(--black-1000-10);
+    border: 1px solid var(--gray-350); /* Gentle Gray */
     transition: transform 0.3s;
     z-index: 10;
 }
@@ -60,7 +62,7 @@ faq 및 inquiries에 제한적인 css style
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--black-1000-50); /* Semi-transparent black */
     display: none;
     z-index: 5;
 }
@@ -78,7 +80,7 @@ faq 및 inquiries에 제한적인 css style
 
 .membership-box {
     width: 120px;
-    border: 1px solid #000;
+    border: 1px solid var(--gray-1000); /* Darker Black */
     border-radius: 5px;
     text-align: center;
     cursor: pointer;
@@ -92,27 +94,27 @@ faq 및 inquiries에 제한적인 css style
 .membership-header {
     padding: 10px;
     font-weight: bold;
-    color: white;
+    color: var(--gray-100); /* Pure White */
 }
 
 .membership-body {
     padding: 15px;
-    background-color: #f4f4f4;
-    border-top: 1px solid #000;
+    background-color: var(--gray-150); /* Very Light Gray */
+    border-top: 1px solid var(--gray-1000); /* Darker Black */
 }
 
-.bronze .membership-header { background-color: #cd7f32; }
-.silver .membership-header { background-color: #c0c0c0; }
-.gold .membership-header { background-color: #ffd700; }
-.red .membership-header { background-color: #dc143c; }
-.purple .membership-header { background-color: #800080; }
+.bronze .membership-header { background-color: var(--bronze); }
+.silver .membership-header { background-color: var(--silver); }
+.gold .membership-header { background-color: var(--gold); }
+.red .membership-header { background-color: var(--red-700); /* Dark Red */ }
+.purple .membership-header { background-color: var(--purple-800); /* Darker Purple */ }
 
 .membership-description {
     padding: 15px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--gray-350); /* Gentle Gray */
     border-radius: 5px;
     margin-top: 10px;
-    background-color: #f4f4f4;
+    background-color: var(--gray-150); /* Very Light Gray */
     text-align: center;
 }
 
@@ -125,7 +127,7 @@ faq 및 inquiries에 제한적인 css style
 
 .inquiry-form input, .inquiry-form select, .inquiry-form textarea {
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--gray-400); /* Subtle Gray */
     border-radius: 5px;
     font-size: 16px;
     width: 100%;
@@ -140,8 +142,8 @@ faq 및 inquiries에 제한적인 css style
     position: absolute;
     right: 20px;
     bottom: 20px;
-    background-color: #4CAF50;
-    color: white;
+    background-color: var(--green-600); /* Medium Dark Green */
+    color: var(--gray-100); /* Pure White */
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
@@ -152,5 +154,5 @@ faq 및 inquiries에 제한적인 css style
 }
 
 #inquiry-submit:hover {
-    background-color: #45a049;
+    background-color: var(--green-700); /* Dark Green */
 }

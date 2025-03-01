@@ -17,21 +17,21 @@ login page에만 특화된 design layout
 }
 
 .text-links .divider {
-    color: #cccccc;
+    color: var(--gray-400); /* Subtle Gray */
     margin: 0 5px; /* Spacing around the bar */
     font-weight: bold;
 }
 
 .submit-text {
     text-decoration: underline;
-    color: #cccccc; /* A more visible gray */
+    color: var(--gray-400); /* A more visible gray */
     cursor: pointer;
     transition: color 0.2s ease, transform 0.2s ease, text-shadow 0.2s ease; /* Smooth transitions */
 }
 
 .submit-text:hover {
     cursor: pointer; /* Keep the pointer change */
-    color: #e0e0e0; /* Slightly lighter gray on hover */
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+    color: var(--gray-300); /* Slightly lighter gray on hover */
+    text-shadow: 1px 1px 1px var(--black-1000-20); /* Subtle shadow effect */
     transform: scale(1.02); /* Minimal scaling for hover effect */
 }

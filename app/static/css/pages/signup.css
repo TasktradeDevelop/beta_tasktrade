@@ -34,8 +34,8 @@ signup page에만 특화된 design layout
 }
 
 .caf-active-background {
-    background-color: #0056b3 !important;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Slightly prominent shadow */
+    background-color: var(--blue-700) !important;
+    box-shadow: 0 4px 10px var(--black-1000-20); /* Slightly prominent shadow */
 }
 
 .input-group {
@@ -54,7 +54,7 @@ signup page에만 특화된 design layout
     flex: 4; /* 80% width */
     padding: 10px;
     font-size: 16px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--gray-400);
     border-radius: 5px;
 }
 
@@ -62,8 +62,8 @@ signup page에만 특화된 design layout
     flex: 1; /* 20% width */
     padding: 10px;
     font-size: 14px;
-    background-color: #007bff;
-    color: white;
+    background-color: var(--blue-500);
+    color: var(--gray-100);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -71,8 +71,8 @@ signup page에만 특화된 design layout
 }
 
 .flex-row button:hover {
-    background-color: #0056b3;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: var(--blue-700);
+    box-shadow: 0 4px 10px var(--black-1000-20);
 }
 
 #input-email-form {
@@ -88,5 +88,5 @@ signup page에만 특화된 design layout
 #timer-display {
     font-size: 14px;
     font-weight: bold;
-    color: #333;
+    color: var(--gray-1000);
 }

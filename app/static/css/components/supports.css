@@ -7,9 +7,9 @@ supports pages contents에 공통적으로 적용되는 design layout
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: var(--gray-100);
+    border: 1px solid var(--gray-350);
+    box-shadow: 0 2px 5px var(--black-1000-10);
 }
 
 .container-title {
@@ -17,7 +17,7 @@ supports pages contents에 공통적으로 적용되는 design layout
     margin-top: 20px;
     margin-bottom: 10px;
     font-weight: bold;
-    color: #333;
+    color: var(--gray-1000);
     padding: 5px 10px;
     background-color: transparent; /* Removed background */
     border: none; /* Removed border */
@@ -25,14 +25,14 @@ supports pages contents에 공통적으로 적용되는 design layout
 
 .supports-item {
     padding: 15px; /* Increased horizontal padding */
-    border: 1px solid #ddd;
+    border: 1px solid var(--gray-350);
     border-radius: 5px;
     margin-bottom: 10px;
     cursor: pointer;
-    background-color: #f4f4f4;
+    background-color: var(--gray-150);
     transition: background-color 0.3s;
 }
 
 .supports-item:hover {
-    background-color: #eaeaea;
+    background-color: var(--gray-175);
 }

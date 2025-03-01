@@ -1,0 +1,77 @@
+:root {
+    /* Gray Shades */
+    --gray-100: #ffffff;   /* Pure White */
+    --gray-150: #f4f4f4;   /* Very Light Gray */
+    --gray-175: #eaeaea;   /* Bright Gray */
+    --gray-200: #f9f9f9;   /* Very Light Gray */
+    --gray-300: #e0e0e0;   /* Light Gray */
+    --gray-350: #dddddd;   /* Gentle Gray */
+    --gray-400: #cccccc;   /* Subtle Gray */
+    --gray-500: #b3b3b3;   /* Medium Gray */
+    --gray-550: #a6a6a6;   /* Taupe Gray */
+    --gray-600: #999999;   /* Medium Dark Gray */
+    --gray-700: #808080;   /* Dark Gray */
+    --gray-800: #666666;   /* Very Dark Gray */
+    --gray-900: #4d4d4d;   /* Almost Black */
+    --gray-950: #555555;   /* Deep Gray */
+    --gray-1000: #333333;  /* Darker Black */
+    --gray-1100: #000000;  /* Pure Black */
+
+    /* Blue Shades */
+    --blue-100: #cce5ff;   /* Lightest Blue */
+    --blue-200: #99ccff;   /* Lighter Blue */
+    --blue-300: #66b2ff;   /* Light Blue */
+    --blue-400: #3399ff;   /* Medium Light Blue */
+    --blue-500: #007bff;   /* Medium Blue */
+    --blue-600: #0069d9;   /* Medium Dark Blue */
+    --blue-700: #0056b3;   /* Dark Blue */
+    --blue-800: #004080;   /* Darker Blue */
+    --blue-900: #002952;   /* Darkest Blue */
+
+    /* Green Shades */
+    --green-100: #d4edda;  /* Lightest Green */
+    --green-200: #a8e0c1;  /* Lighter Green */
+    --green-300: #7cd3a8;  /* Light Green */
+    --green-400: #51c68f;  /* Medium Light Green */
+    --green-500: #28a745;  /* Medium Green */
+    --green-600: #218838;  /* Medium Dark Green */
+    --green-700: #1e7e34;  /* Dark Green */
+    --green-800: #1c7430;  /* Darker Green */
+    --green-900: #155724;  /* Darkest Green */
+
+    /* Red Shades */
+    --red-100: #f8d7da;    /* Lightest Red */
+    --red-200: #f1aeb5;    /* Lighter Red */
+    --red-300: #ea868f;    /* Light Red */
+    --red-400: #e35d6a;    /* Medium Light Red */
+    --red-500: #dc3545;    /* Medium Red */
+    --red-600: #c82333;    /* Medium Dark Red */
+    --red-700: #bd2130;    /* Dark Red */
+    --red-800: #a71d2a;    /* Darker Red */
+    --red-900: #721c24;    /* Darkest Red */
+
+    /* Purple Shades */
+    --purple-100: #f3e5f5; /* Lightest Purple */
+    --purple-200: #e1bee7; /* Lighter Purple */
+    --purple-300: #ce93d8; /* Light Purple */
+    --purple-400: #bfa8f0; /* Medium Light Purple */
+    --purple-500: #ac97d8; /* Medium Purple */
+    --purple-600: #9c27b0; /* Medium Dark Purple */
+    --purple-700: #7b1fa2; /* Dark Purple */
+    --purple-800: #6a1b9a; /* Darker Purple */
+    --purple-900: #4a148c; /* Darkest Purple */
+
+    /* Metallic Shades */
+    --bronze: #cd7f32;     /* Bronze */
+    --silver: #c0c0c0;     /* Silver */
+    --gold: #ffd700;       /* Gold */
+
+    /* Black with Opacity */
+    --black-1000-10: rgba(0, 0, 0, 0.1); /* Black at 10% opacity */
+    --black-1000-20: rgba(0, 0, 0, 0.2); /* Black at 20% opacity */
+    --black-1000-50: rgba(0, 0, 0, 0.5); /* Black at 50% opacity */
+    --black-1000-60: rgba(0, 0, 0, 0.6); /* Black at 60% opacity */
+
+    /* RGB Values */
+    --black-rgb: 0, 0, 0;  /* Black RGB */
+}

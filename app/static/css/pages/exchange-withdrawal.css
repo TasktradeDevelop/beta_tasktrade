@@ -1,3 +1,9 @@
+/*
+coin 입출금에 제한적인 css style
+*/
+
+@import url('../utilities/colors.css');
+
 /* Container */
 .container {
     display: flex;
@@ -11,11 +17,11 @@
 .total-assets {
     flex: 0; /* Allow it to take minimum space */
     margin-bottom: 20px;
-    background-color: #f9f9f9;
+    background-color: var(--gray-200); /* Very Light Gray */
     padding: 5px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--gray-350); /* Gentle Gray */
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px var(--black-1000-10);
 }
 
 .total-assets h3 {
@@ -33,11 +39,11 @@
 .transaction-box {
     display: flex;
     flex-direction: column;
-    background-color: #f9f9f9;
+    background-color: var(--gray-200); /* Very Light Gray */
     padding: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--gray-350); /* Gentle Gray */
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px var(--black-1000-10);
     height: 100%; /* Make the boxes extend to fill the height */
     gap: 10px;
 }
@@ -46,13 +52,13 @@
     margin-top: 0;
     margin-bottom: 10px;
     font-size: 1.2rem;
-    color: #333;
+    color: var(--gray-1000); /* Darker Black */
 }
 
 .transaction-box p {
     flex: 1; /* Allow the text area to grow if needed */
     font-size: 1rem;
-    color: #555;
+    color: var(--gray-950); /* Almost Black */
     overflow: auto; /* Scroll if content exceeds */
 }
 
@@ -67,16 +73,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f9f9f9;
+    background-color: var(--gray-200); /* Very Light Gray */
     border-radius: 8px;
     padding: 10px 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px var(--black-1000-10);
 }
 
 /* Date Column */
 .transaction-date {
     font-size: 14px;
-    color: #666;
+    color: var(--gray-800); /* Deep Gray */
     flex: 1; /* Takes space based on content */
 }
 
@@ -90,26 +96,26 @@
 
 .transaction-status.deposit {
     font-size: 16px;
-    color: #28a745; /* Green for deposit */
+    color: var(--green-600); /* Medium Dark Green */
     font-weight: bold;
 }
 
 .transaction-status.withdraw {
     font-size: 16px;
-    color: #dc3545; /* Red for withdraw */
+    color: var(--red-700); /* Dark Red */
     font-weight: bold;
 }
 
 .transaction-time {
     font-size: 12px;
-    color: #888;
+    color: var(--gray-550); /* Taupe Gray */
 }
 
 /* Amount Column */
 .transaction-amount {
     font-size: 16px;
     font-weight: bold;
-    color: #333;
+    color: var(--gray-1000); /* Darker Black */
     text-align: right;
     flex: 1; /* Takes space based on content */
 }
@@ -132,7 +138,7 @@
     flex: 1;
     padding: 10px;
     font-size: 1rem;
-    color: white;
+    color: var(--gray-100); /* Pure White */
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -140,17 +146,17 @@
 }
 
 .exchange-button {
-    background-color: #28a745;
+    background-color: var(--green-600); /* Medium Dark Green */
 }
 
 .exchange-button:hover {
-    background-color: #218838;
+    background-color: var(--green-700); /* Dark Green */
 }
 
 .withdraw-button {
-    background-color: #dc3545;
+    background-color: var(--red-700); /* Dark Red */
 }
 
 .withdraw-button:hover {
-    background-color: #c82333;
+    background-color: var(--red-800); /* Darker Red */
 }
